@@ -1,0 +1,9 @@
+{
+  "locales": ["en-US", "al"],
+  "defaultLocale": "al",
+  "pages": {
+    "*": ["common"],
+    "/": ["home"],
+    "/content/[slug]": ["content"]
+  }
+}
