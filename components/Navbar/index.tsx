@@ -72,7 +72,7 @@ const Navbar = (props: Props) => {
 
   return (
     <nav className='w-full'>
-      <div className='flex py-2 items-center h-16 justify-between mx-auto px-4  max-w-7xl'>
+      <div className='flex py-2 items-center h-16 justify-between mx-auto px-6  max-w-7xl'>
         <Link href='/' className='flex gap-x-2'>
           <Image src={passport} width={44} height={44} alt='' />
           <div className='hidden md:flex flex flex-col items-center justify-center'>
