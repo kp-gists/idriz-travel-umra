@@ -7,7 +7,7 @@ export type SocialNetwork = {
 
 export type Contact = {
   type: 'tel' | 'whatsapp' | 'email';
-  icon: string;
+  icon: StaticImageData;
   key: string;
   displayName: string | number;
   href: string;

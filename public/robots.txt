@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codewithkoli.com
+
+# Sitemaps
+Sitemap: https://codewithkoli.com

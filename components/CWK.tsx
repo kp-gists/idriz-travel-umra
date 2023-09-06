@@ -17,7 +17,7 @@ const CWK = () => {
         </Link>
         .
       </h2>
-      <p>All right reserved ©{today.getFullYear()}</p>
+      <p>All rights reserved ©{today.getFullYear()}</p>
     </div>
   );
 };

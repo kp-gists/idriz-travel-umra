@@ -12,6 +12,7 @@ import Contact from '@/components/landing/Contact';
 import HotelList from '@/components/landing/HotelList';
 import TourGuideList from '@/components/landing/TourGuideList';
 import UmrahStatistics from '@/components/landing/UmrahStatistics';
+import HolyPlaces from '@/components/landing/HolyPlaces';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,6 +29,8 @@ export default function Home() {
 
       {/* Sherbimet|services */}
       <Services />
+
+      <HolyPlaces />
 
       {/* rreth nesh */}
       <AbutUs />
