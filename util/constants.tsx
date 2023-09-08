@@ -21,7 +21,7 @@ export const navLinks = [
   {
     href: '#packages',
     title: 'Paketat',
-    key: 'home',
+    key: 'packages',
   },
   {
     href: '#services',
@@ -36,7 +36,7 @@ export const navLinks = [
   {
     href: '#contact',
     title: 'Kontakt',
-    key: 'home',
+    key: 'contact',
   },
 ];
 
@@ -134,3 +134,36 @@ export const neededDocs = [
   'Pasaportë e vlefshme jo më pak se 6 muaj',
   'Fotografi personale',
 ];
+
+const makkahLiveIFrame = ({
+  width = 560,
+  height = 315,
+}: {
+  width: number;
+  height: number;
+}) => (
+  <iframe
+    width={width}
+    height={height}
+    src='https://www.youtube.com/embed/N9QSL1PLUS4?si=lP9sxGCi7ku2w6SS'
+    title='YouTube video player'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowFullScreen
+  ></iframe>
+);
+const madinahLiveIFrame = ({
+  width = 560,
+  height = 315,
+}: {
+  width: number;
+  height: number;
+}) => (
+  <iframe
+    width={width}
+    height={height}
+    src='https://www.youtube.com/embed/EB0Y1ztWnic?si=y977xBtCcDsGfsg3'
+    title='YouTube video player'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowFullScreen
+  ></iframe>
+);

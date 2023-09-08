@@ -94,7 +94,7 @@ const MainLayout = ({ children, className }: Props) => {
       </Head>
       <main className={className}>
         <Navbar />
-        <div className='max-w-7xl mx-auto h-screen px-6'>
+        <div className='max-w-7xl mx-auto h-screen px-6 '>
           {children}
           <Footer />
         </div>
