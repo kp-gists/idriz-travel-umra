@@ -1,0 +1,35 @@
+.crownCardBg {
+  background-image: url('/images/crown-golden-texture.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 24px;
+  height: fit-content;
+}
+
+@media (max-width: 640px) {
+  .crownCardBg {
+    background-image: none;
+    padding-top: 190px;
+    background-image: url('/images/crown-golden-texture-vertical.jpg');
+  }
+}
+
+@media (min-width: 640px) {
+  .crownCardBg{
+    padding-left: 190px;
+    background-position: left;
+  }
+}
+
+@media (min-width: 1028px) {
+  .crownCardBg {
+    background-image: none;
+    background-position: top;
+    padding: 0;
+    padding-top: 210px;
+    background-image: url('/images/crown-golden-texture-vertical.jpg');
+
+  }
+}

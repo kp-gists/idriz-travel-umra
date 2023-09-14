@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import React from 'react';
-import meccaBg from '@/assets/imgs/mecca-illustrator.jpg';
-import mecca from '@/assets/imgs/mecca-illustrator.jpg';
-import mesjidNaba from '@/assets/imgs/medina-prophets-mosque.jpg';
-import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
-import kaba from '@/assets/imgs/kaba.jpg';
-import { Button } from '../ui/button';
 import { Phone } from 'lucide-react';
-import CurrentTrips from '../Trips/CurrentTrips';
+import Image from 'next/image';
+
+import { Button } from '@/components/ui/button';
+import CurrentTrips from '@/components/Trips/CurrentTrips';
+
+import kaba from '@/assets/imgs/kaba.jpg';
+import meccaBg from '@/assets/imgs/mecca-illustrator.jpg';
+import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
+import mesjidNaba from '@/assets/imgs/medina-prophets-mosque.jpg';
 
 type Props = {};
 
@@ -25,7 +25,7 @@ const text_gradient =
 const Hero = (props: Props) => {
   return (
     <div className='relative'>
-      <div className='w-full my-4 relative overflow-visible '>
+      <div className='w-full my-4 relative overflow-hidden '>
         <Image
           src={meccaMedinah}
           className='z-50 h-fit hidden md:visible object-cover md:block  md:object-contain w-screen  md:min-w-sm min-h-[200px] rounded-xl '
@@ -43,7 +43,7 @@ const Hero = (props: Props) => {
           <CurrentTrips />
         </div>
 
-        <div className='w-full md:w-1/2 z-20 relative  mt-[320px] flex flex-col'>
+        <div className='w-full md:w-1/2 z-20 relative  mt-[450px] flex flex-col'>
           <h1
             className={
               'text-3xl md:text-4xl text-center mb-4 font-bold font-poppins'
@@ -63,11 +63,11 @@ const Hero = (props: Props) => {
           </Button>
         </div>
 
-        <div className='w-full md:w-1/2 lg:mt-[320px]'>
+        <div className='w-full md:w-1/2 lg:mt-[450px]'>
           {/* gradient start */}
           <div className='relative  w-full h-full  overflow-hidden'>
             <Image
-              src={mecca}
+              src={kaba}
               className='z-50 w-full h-full object-cover  rounded-xl '
               alt=''
             />

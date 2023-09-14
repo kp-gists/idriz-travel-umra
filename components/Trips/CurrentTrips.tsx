@@ -1,15 +1,17 @@
 import { Skeleton } from '@/components/ui/skeleton';
-import { fetchCurrentTrips } from '@/lib/fetching';
-import { Months, UmrahPrice } from '@/types';
-import { allMonths } from '@/util/date';
 import { useQuery } from '@tanstack/react-query';
+import { Plane, PlaneTakeoff, X } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+import ListPhoneContact from '@/components/contact/ListPhoneContact';
+
 import hotel from '@/assets/icons/hotel-64.png';
 import muslim from '@/assets/icons/muslim-48.png';
-import { PlaneLanding, PlaneTakeoff, X } from 'lucide-react';
-import ListPhoneContact from '../contact/ListPhoneContact';
+
+import { fetchCurrentTrips } from '@/lib/fetching';
+import { Months, UmrahPrice } from '@/types';
+import { allMonths } from '@/util/date';
 
 const date = new Date();
 
@@ -36,7 +38,7 @@ const CurrentTrips = () => {
   if (!isMount) return null;
 
   const LoadingSkeleton = (
-    <Skeleton className='h-[220px] w-[350px] p-4 py-5 px-5 rounded-xl'>
+    <Skeleton className='h-[220px] w-full md:w-[350px] mx-0 p-4 py-5 px-5 flex flex-col justify-between rounded-xl'>
       <p className='flex items-center font-poppins font-semibold mb-2'>
         <span className='relative flex h-4 w-4 mr-2'>
           <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-500 opacity-75'></span>
@@ -50,10 +52,19 @@ const CurrentTrips = () => {
         <Skeleton className='h-4 w-10 bg-gray-500' />
         <Skeleton className='h-4 w-20 bg-gray-500' />
       </Skeleton>
-      <Skeleton className='flex gap-1 items-center '>
+
+      <Skeleton className='flex gap-1 items-center mb-4'>
         <PlaneTakeoff className='h-5 w-5 mr-2' />
         <Skeleton className='h-4 w-10 bg-gray-500' />
         <Skeleton className='h-4 w-20 bg-gray-500' />
+      </Skeleton>
+
+      <Skeleton className='h-6 w-full  bg-gray-500 my-4' />
+
+      <Skeleton className='flex gap-x-2 justify-around items-center mb-2'>
+        <Skeleton className='h-10 w-14 bg-gray-500' />
+        <Skeleton className='h-10 w-14 bg-gray-500' />
+        <Skeleton className='h-10 w-14 bg-gray-500' />
       </Skeleton>
     </Skeleton>
   );
@@ -88,7 +99,7 @@ const CurrentTrips = () => {
           return (
             <div
               key={trip.slug}
-              className='relative shadow-2xl text-white min-w-[300px] w-full md:w-[400px]  max-h-[300px] my-auto mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 ring-2 ring-cyan-600-500  py-3 pb-5 px-6 rounded-xl'
+              className='z-10 crownCardBg relative ring ring-indigo-500 shadow-2xl text-white min-w-[300px] w-full md:w-[600px]   rounded-lg'
             >
               <p className='flex items-center justify-center text-lg drop-shadow-md font-poppins text-center font-bold mb-1'>
                 {isAvailable && (
@@ -101,36 +112,42 @@ const CurrentTrips = () => {
               </p>
 
               {/* nisja-kthimi */}
-              <div className='flex flex-col md:flex-row'>
-                <h3 className='flex mb-1 mr-4'>
-                  <PlaneTakeoff className='h-5 w-5 mr-2 ' />
-                  <span className='text-indigo-900'>
-                    Tirana: <strong>{formattedDepartingDate}</strong>
+              <div className='flex justify-around flex-row '>
+                <h3 className='flex  mb-1 mr-4'>
+                  <Plane className='h-5 w-5 mr-2 ' />
+                  <span className='text-indigo-100'>
+                    Tirana: <br /> <strong>{formattedDepartingDate}</strong>
                   </span>
                 </h3>
                 <h3 className='flex mb-1'>
-                  <PlaneLanding className='h-5 w-5 mr-2 ' />{' '}
-                  <span className='text-indigo-900'>
-                    Jeddah: <strong>{formattedArrivingDate}</strong>
+                  <Plane className='h-5 w-5 mr-2 ' />{' '}
+                  <span className='text-indigo-100'>
+                    Jeddah: <br /> <strong>{formattedArrivingDate}</strong>
                   </span>
                 </h3>
               </div>
 
               {/* cmimet */}
-              <div className='flex flex-col items-center gap-y-2 mt-1 py-1 w-full'>
+              <div className='flex flex-col items-center px-2  gap-y-2   w-full'>
                 <div className='flex items-center'>
-                  <Image src={hotel} className='h-8 w-8 ' alt='hotel umrah' />
-                  <h2 className='text-muted'>Hotelet në Mekke dhe Medine</h2>
+                  <Image
+                    src={hotel}
+                    className='h-8 w-8 mr-2'
+                    alt='hotel umrah'
+                  />
+                  <h2 className='text-muted text-md'>
+                    Hotelet në Mekke dhe Medine
+                  </h2>
                 </div>
 
-                <div className='flex items-center  gap-x-6 mb-1'>
+                <div className='flex items-center justify-around w-full lg:w-fit px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3'>
                   {prices.map((price: UmrahPrice) => {
                     return (
                       <div
                         key={price.id}
-                        className='flex flex-col items-center justify-center ring-1 rounded-xl ring-sky-400  px-4 py-2 drop-shadow-md shadow-white'
+                        className='flex flex-col w-full items-center justify-center ring-1 rounded-xl ring-sky-400 mx-1 px-1 md:px-4 py-2 drop-shadow-md shadow-white'
                       >
-                        <div className='flex items-end gap-0.5 text-green-950'>
+                        <div className='flex items-end gap-0.5 text-white'>
                           <Image
                             src={muslim}
                             className='h-6 w-6'
@@ -152,7 +169,7 @@ const CurrentTrips = () => {
                 <ListPhoneContact />
               </div>
 
-              <p className='text-sm font-bold text-purple-800 absolute bottom-0 right-4'>
+              <p className='text-sm font-bold text-white text-right px-4 py-1 ml-auto'>
                 *Çmimet janë për person
               </p>
             </div>

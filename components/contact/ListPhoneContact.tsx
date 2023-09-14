@@ -18,7 +18,7 @@ const ListPhoneContact = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant={'cta'} size={'cta'}>
+        <Button variant={'cta'} size={'cta'} className='w-full md:w-fit'>
           Rezervo Tani
         </Button>
       </DropdownMenuTrigger>
