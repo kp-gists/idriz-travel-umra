@@ -26,3 +26,14 @@ export type Months =
   | 'October'
   | 'November'
   | 'December';
+
+export type Trip = {};
+
+export type UmrahPrice = {
+  currency: string;
+  discounted_value?: number;
+  id?: number;
+  isDiscounted: boolean;
+  room: 'roomX2' | 'roomX2' | 'roomX2';
+  value: number;
+};

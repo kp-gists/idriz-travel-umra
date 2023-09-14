@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import MainLayout from '@/components/Layouts/MainLayout';
 import Hero from '@/components/landing/Hero';
 import UmrahPackages from '@/components/landing/UmrahPackages';

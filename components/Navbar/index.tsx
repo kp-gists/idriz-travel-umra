@@ -16,6 +16,8 @@ import { Button } from '@/components/ui/button';
 import passport from '@/assets/icons/mecca.png';
 import Image from 'next/image';
 import { navLinks } from '@/util/constants';
+import { Menu } from 'lucide-react';
+import ListPhoneContact from '../contact/ListPhoneContact';
 
 type Props = {};
 
@@ -71,19 +73,31 @@ const Navbar = (props: Props) => {
   }, [t]);
 
   return (
-    <nav className='w-full'>
-      <div className='flex py-2 items-center h-16 justify-between mx-auto px-6  max-w-7xl'>
-        <Link href='/' className='flex gap-x-2'>
-          <Image src={passport} width={44} height={44} alt='' />
-          <div className='hidden md:flex flex flex-col items-center justify-center'>
+    <nav className='w-full shadow-lg'>
+      <div className='flex py-2 items-center h-16 justify-between mx-auto px-2 md:px-6  max-w-7xl'>
+        <button className='block md:hidden '>
+          <Menu className='h-8 w-8' />
+        </button>
+
+        <Link
+          href='/'
+          className='flex gap-x-0 md:gap-x-2'
+          title='Idriz Travel Umrah'
+        >
+          <Image
+            src={passport}
+            width={44}
+            height={44}
+            alt=''
+            className='ml-10'
+          />
+          <div className='hidden lg:flex flex-col items-center justify-center'>
             <p className='text-lg font-bold '>Idriz Travel Umrah</p>
           </div>
         </Link>
         {menu}
         <div>
-          <Button variant='cta' size='lg'>
-            Rezervo Tani
-          </Button>
+          <ListPhoneContact />
           {isMultiLanguage && dropdown}
         </div>
       </div>

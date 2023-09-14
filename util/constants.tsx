@@ -55,7 +55,7 @@ const socialNetworks: SocialNetwork[] = [
   },
 ];
 
-const contacts: Contact[] = [
+export const contacts: Contact[] = [
   {
     type: 'tel',
     key: 'numri tel',

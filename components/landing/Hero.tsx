@@ -4,6 +4,7 @@ import meccaBg from '@/assets/imgs/mecca-illustrator.jpg';
 import mecca from '@/assets/imgs/mecca-illustrator.jpg';
 import mesjidNaba from '@/assets/imgs/medina-prophets-mosque.jpg';
 import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
+import kaba from '@/assets/imgs/kaba.jpg';
 import { Button } from '../ui/button';
 import { Phone } from 'lucide-react';
 import CurrentTrips from '../Trips/CurrentTrips';
@@ -23,21 +24,26 @@ const text_gradient =
 
 const Hero = (props: Props) => {
   return (
-    <>
-      <div className='w-full my-4'>
+    <div className='relative'>
+      <div className='w-full my-4 relative overflow-visible '>
         <Image
           src={meccaMedinah}
-          className='z-50 w-full h-full object-cover  rounded-xl '
+          className='z-50 h-fit hidden md:visible object-cover md:block  md:object-contain w-screen  md:min-w-sm min-h-[200px] rounded-xl '
+          alt=''
+        />
+        <Image
+          src={kaba}
+          className='z-50 h-fit visible md:hidden  object-fill w-screen  md:min-w-sm min-h-[200px] rounded-sm '
           alt=''
         />
       </div>
 
-      <section className='relative flex pt-8 md:pt-0 flex-col md:flex-row justify-start md:justify-start lg:justify-center items-center gap-12 w-full h-full mb-8'>
-        <div className='absolute top-0 left-0 z-50 w-full h-full'>
+      <section className='relative flex pt-4 md:pt-0 flex-col lg:flex-row justify-start md:justify-start lg:justify-center items-center gap-12 w-full h-full mb-8'>
+        <div className='w-full h-full relative lg:absolute top-0 lg:-top-10 left-0 right-0 '>
           <CurrentTrips />
         </div>
 
-        <div className='w-full md:w-1/2 z-20 flex flex-col'>
+        <div className='w-full md:w-1/2 z-20 relative  mt-[320px] flex flex-col'>
           <h1
             className={
               'text-3xl md:text-4xl text-center mb-4 font-bold font-poppins'
@@ -57,7 +63,7 @@ const Hero = (props: Props) => {
           </Button>
         </div>
 
-        <div className='w-full md:w-1/2'>
+        <div className='w-full md:w-1/2 lg:mt-[320px]'>
           {/* gradient start */}
           <div className='relative  w-full h-full  overflow-hidden'>
             <Image
@@ -99,7 +105,7 @@ const Hero = (props: Props) => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
