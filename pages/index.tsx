@@ -11,6 +11,7 @@ import HotelList from '@/components/landing/HotelList';
 import TourGuideList from '@/components/landing/TourGuideList';
 import UmrahStatistics from '@/components/landing/UmrahStatistics';
 import HolyPlaces from '@/components/landing/HolyPlaces';
+import RamadanUmra from '@/components/notifications/RamadanUmra';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* Paketat e fundit */}
       <UmrahPackages />
+
+      {/* Njoftime */}
+      <RamadanUmra year={2024} />
 
       <HolyPlaces />
 
