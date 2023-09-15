@@ -11,8 +11,8 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <footer className='w-full py-2 px-4 mt-8 pt-4  border-t-2  border-gray-300/90'>
-      <div className='w-full flex flex-col  md:flex-row gap-x-4 mb-8 md:items-center justify-between md:justify-center '>
-        <div className='flex items-center w-full h-full gap-x-3 mb-8 md:mb-0'>
+      <div className='w-full flex flex-col  md:flex-row gap-x-4 mb-8 md:items-center justify-between md:justify-around '>
+        <div className='flex items-center h-full gap-x-3 mb-8 md:mb-0'>
           <div className='w-14 h-14 md:w-20 md:h-20  rounded-lg'>
             <Image
               src={idrizTravel}

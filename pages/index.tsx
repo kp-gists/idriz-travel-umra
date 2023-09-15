@@ -12,6 +12,7 @@ import TourGuideList from '@/components/landing/TourGuideList';
 import UmrahStatistics from '@/components/landing/UmrahStatistics';
 import HolyPlaces from '@/components/landing/HolyPlaces';
 import RamadanUmra from '@/components/notifications/RamadanUmra';
+import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,8 @@ export default function Home() {
   return (
     <MainLayout className={inter.className}>
       <Hero />
+
+      <EjaNeUmreSection />
 
       {/* Sherbimet|services */}
       <Services />

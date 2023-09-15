@@ -46,7 +46,7 @@
 // Ramadan Cards Background Image
 .ramadanBg{
   background-image: url('/images/ramdan-bg.jpeg');
-  background-position: left;
+  background-position: right 10% bottom 20%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -54,7 +54,7 @@
 
 @media (max-width: 640px) {
   .ramadanBg{
-  background-position: left 50% bottom 10%;
+  background-position: left 50% bottom 40%;
   background-size: cover;
   }
   

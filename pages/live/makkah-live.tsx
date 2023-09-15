@@ -6,7 +6,7 @@ type Props = {};
 
 const MakkahLive = (props: Props) => {
   return (
-    <PageLayout>
+    <PageLayout title='Mekka Live'>
       <div
         className='pageMekkaLive'
         style={{

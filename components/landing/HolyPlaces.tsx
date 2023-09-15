@@ -27,7 +27,7 @@ const PlayWrapper = ({
       <div className='absolute flex-1 top-0 left-0 right-0 bottom-0 bg-indigo-300 rounded-md -z-10 ' />
       {children}
 
-      <PlaySquare className='absolute top-1/2  md:bottom-1/4 left-1/2 md:left-1/2 z-30 h-10 w-10 md:w-16 md:h-16 text-rose-500 group-hover:text-rose-600' />
+      <PlaySquare className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 h-10 w-10 md:w-16 md:h-16 text-gray-200/50 group-hover:text-gray-200' />
     </div>
   </div>
 );

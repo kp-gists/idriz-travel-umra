@@ -37,8 +37,8 @@ const CurrentTrips = () => {
 
   if (!isMount) return null;
 
-  const LoadingSkeleton = (
-    <Skeleton className='h-[220px] w-full md:w-[350px] mx-0 p-4 py-5 px-5 flex flex-col justify-between rounded-xl'>
+  const LoadingSkeleton = () => (
+    <Skeleton className='h-[482px] crownCardBg m-w-[320px] mx-0 p-4 py-5 px-5 pt-[200px] relative flex flex-col justify-between rounded-md'>
       <p className='flex items-center font-poppins font-semibold mb-2'>
         <span className='relative flex h-4 w-4 mr-2'>
           <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-500 opacity-75'></span>
@@ -71,7 +71,11 @@ const CurrentTrips = () => {
 
   return (
     <div className='w-full flex flex-col  gap-4 md:gap-y-10 lg:flex-row  md:items-center justify-center  '>
-      {isLoading && !isError && LoadingSkeleton}
+      {isLoading &&
+        !isError &&
+        Array.from({ length: 3 }).map((_, idx) => (
+          <LoadingSkeleton key={idx} />
+        ))}
       {isFetched &&
         data?.data?.map((trip: any) => {
           const {

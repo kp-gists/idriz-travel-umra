@@ -5,7 +5,7 @@ const today = new Date();
 
 const CWK = () => {
   return (
-    <div className='max-w-5xl flex flex-col mt-4 md:flex-row items-center justify-center gap-2 py-1'>
+    <div className='max-w-5xl mx-auto flex flex-col mt-4 md:flex-row items-center justify-center gap-2 py-1'>
       <h2>
         Website develope by{' '}
         <Link
