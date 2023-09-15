@@ -18,8 +18,7 @@ const PageLayout = ({ children, title, description, imageUrl }: Props) => {
         <title>{metaTilte}</title>
       </Head>
       <main>
-        <Navbar />
-        <div className='max-w-7xl mx-auto h-screen px-6 '>
+        <div className='w-full h-full'>
           {children}
           <Footer />
         </div>

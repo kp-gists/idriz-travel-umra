@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 import CurrentTrips from '@/components/Trips/CurrentTrips';
 
 import kaba from '@/assets/imgs/kaba.jpg';
-import meccaBg from '@/assets/imgs/mecca-illustrator.jpg';
+import idrizTravel from '@/assets/imgs/idriz-travel-umre.jpg';
 import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
-import mesjidNaba from '@/assets/imgs/medina-prophets-mosque.jpg';
 
 type Props = {};
 
@@ -24,7 +23,7 @@ const text_gradient =
 
 const Hero = (props: Props) => {
   return (
-    <div className='relative'>
+    <div className='relative mb-20'>
       <div className='w-full my-4 relative overflow-hidden '>
         <Image
           src={meccaMedinah}
@@ -38,12 +37,12 @@ const Hero = (props: Props) => {
         />
       </div>
 
-      <section className='relative flex pt-4 md:pt-0 flex-col lg:flex-row justify-start md:justify-start lg:justify-center items-center gap-12 w-full h-full mb-8'>
+      <section className='relative flex pt-4 md:pt-0 flex-col lg:flex-row justify-start md:justify-start lg:justify-center items-center gap-12 w-full h-full'>
         <div className='w-full h-full relative lg:absolute top-0 lg:-top-10 left-0 right-0 '>
           <CurrentTrips />
         </div>
 
-        <div className='w-full md:w-1/2 z-20 relative  mt-[450px] flex flex-col'>
+        <div className='w-full md:w-1/2 z-20 relative  lg:mt-[630px] flex flex-col'>
           <h1
             className={
               'text-3xl md:text-4xl text-center mb-4 font-bold font-poppins'
@@ -63,11 +62,11 @@ const Hero = (props: Props) => {
           </Button>
         </div>
 
-        <div className='w-full md:w-1/2 lg:mt-[450px]'>
+        <div className='w-full md:w-1/2 lg:mt-[630px] pt-10'>
           {/* gradient start */}
           <div className='relative  w-full h-full  overflow-hidden'>
             <Image
-              src={kaba}
+              src={idrizTravel}
               className='z-50 w-full h-full object-cover  rounded-xl '
               alt=''
             />
@@ -87,24 +86,6 @@ const Hero = (props: Props) => {
           {/* gradient end */}
         </div>
       </section>
-
-      <div className='flex flex-col gap-20'>
-        <div className='w-full h-full relative'>
-          <Image
-            src={meccaBg}
-            className='z-50 w-full rounded-lg'
-            alt='mecca: travel with idriz cela travel umrah'
-          />
-        </div>
-
-        <div className='w-full h-full relative'>
-          <Image
-            src={mesjidNaba}
-            className='z-50 w-full h-fit rounded-lg'
-            alt=''
-          />
-        </div>
-      </div>
     </div>
   );
 };

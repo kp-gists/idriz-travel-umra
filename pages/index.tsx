@@ -22,11 +22,11 @@ export default function Home() {
     <MainLayout className={inter.className}>
       <Hero />
 
-      {/* Paketat e fundit */}
-      <UmrahPackages />
-
       {/* Sherbimet|services */}
       <Services />
+
+      {/* Paketat e fundit */}
+      <UmrahPackages />
 
       <HolyPlaces />
 

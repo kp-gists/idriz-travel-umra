@@ -1,1 +1,10 @@
-@import './live.scss'
+@import './live.scss';
+
+.mainTexture{
+  background-image: url('/images/wild-flowers.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: fill;
+  position: relative;
+  background-clip: inherit;
+}

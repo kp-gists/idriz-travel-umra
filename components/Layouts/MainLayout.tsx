@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import MetaData from '../Metadata';
+import { cn } from '@/lib/utils';
 
 type Props = {
   children: React.ReactNode;
@@ -16,7 +17,7 @@ const MainLayout = ({ children, className }: Props) => {
   return (
     <>
       <MetaData title='Idriz Çela' />
-      <main className={className}>
+      <main className={cn(className, 'mainTexture')}>
         <Navbar />
         <div className='max-w-7xl mx-auto h-full px-6 overflow-hidden'>
           {children}

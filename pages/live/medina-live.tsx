@@ -1,22 +1,22 @@
 import React from 'react';
-import makkahIllustration from '@/assets/imgs/mecca-illustrator.jpg';
+import medina from '@/assets/imgs/meddina4.jpg';
 import PageLayout from '@/components/Layouts/PageLayout';
 
 type Props = {};
 
-const MakkahLive = (props: Props) => {
+const MedinaLive = (props: Props) => {
   return (
     <PageLayout>
       <div
         className='pageMekkaLive'
         style={{
-          backgroundImage: `url(${makkahIllustration.src})`,
+          backgroundImage: `url(${medina.src})`,
         }}
       >
-        MakkahLive
+        MedinaLive
       </div>
     </PageLayout>
   );
 };
 
-export default MakkahLive;
+export default MedinaLive;

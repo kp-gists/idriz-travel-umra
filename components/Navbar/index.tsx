@@ -73,7 +73,7 @@ const Navbar = (props: Props) => {
   }, [t]);
 
   return (
-    <nav className='w-full shadow-lg'>
+    <nav className='w-full shadow-lg backdrop-blur-sm bg-white/20 '>
       <div className='flex py-2 items-center h-16 justify-between mx-auto px-2 md:px-6  max-w-7xl'>
         <button className='block md:hidden '>
           <Menu className='h-8 w-8' />
