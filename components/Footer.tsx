@@ -20,6 +20,7 @@ const Footer = (props: Props) => {
               height={80}
               alt=''
               className='rounded-sm'
+              loading='lazy'
             />
           </div>
           <div className='md:w-full md:h-full'>

@@ -134,6 +134,7 @@ const CurrentTrips = () => {
                     src={hotel}
                     className='h-8 w-8 mr-2'
                     alt='hotel umrah'
+                    loading='lazy'
                   />
                   <h2 className='text-muted text-md'>
                     Hotelet në Mekke dhe Medine
@@ -152,6 +153,7 @@ const CurrentTrips = () => {
                             src={muslim}
                             className='h-6 w-6'
                             alt='hotel muslim person'
+                            loading='lazy'
                           />
                           <X className='h-4 w-4 mb-0.5' />
                           <span className='text-md'>

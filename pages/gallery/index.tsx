@@ -12,6 +12,7 @@ function GalleryPage() {
           alt='medina'
           className='rounded-xl z-20 object-fill'
           placeholder='blur'
+          loading='lazy'
         />
       </div>
       <div className=''>
@@ -20,6 +21,7 @@ function GalleryPage() {
           alt='medina'
           className='rounded-xl z-20 '
           placeholder='blur'
+          loading='lazy'
         />
       </div>
       <div className='w-full relative'>
@@ -28,6 +30,7 @@ function GalleryPage() {
           alt='medina'
           className='rounded-xl z-20 '
           placeholder='blur'
+          loading='lazy'
         />
       </div>
       <div className='w-full relative'>
@@ -36,6 +39,7 @@ function GalleryPage() {
           alt='medina'
           className='rounded-xl z-20 '
           placeholder='blur'
+          loading='lazy'
         />
       </div>
       <div className='w-full relative'>
@@ -44,6 +48,7 @@ function GalleryPage() {
           alt='medina'
           className='rounded-xl z-20 '
           placeholder='blur'
+          loading='lazy'
         />
       </div>
     </div>

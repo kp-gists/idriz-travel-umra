@@ -90,6 +90,7 @@ const Navbar = (props: Props) => {
             height={44}
             alt=''
             className='ml-10'
+            loading='eager'
           />
           <div className='hidden lg:flex flex-col items-center justify-center'>
             <p className='text-lg font-bold '>Idriz Travel Umrah</p>

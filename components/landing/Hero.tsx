@@ -29,11 +29,13 @@ const Hero = (props: Props) => {
           src={meccaMedinah}
           className='z-50 h-fit hidden md:visible object-cover md:block  md:object-contain w-screen  md:min-w-sm min-h-[200px] rounded-xl '
           alt=''
+          loading='lazy'
         />
         <Image
           src={kaba}
           className='z-50 h-fit visible md:hidden  object-fill w-screen  md:min-w-sm min-h-[200px] rounded-sm '
           alt=''
+          loading='lazy'
         />
       </div>
 
@@ -69,6 +71,7 @@ const Hero = (props: Props) => {
               src={idrizTravel}
               className='z-50 w-full h-full object-cover  rounded-xl '
               alt=''
+              loading='lazy'
             />
 
             <p></p>

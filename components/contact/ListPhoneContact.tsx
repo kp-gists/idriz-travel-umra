@@ -35,6 +35,7 @@ const ListPhoneContact = () => {
                 src={nr.icon}
                 alt={`${nr?.displayName}`}
                 className='h-10 w-10 rounded-lg'
+                loading='eager'
               />
               <PhoneForwarded className='text-blue-700 w-6 h-6' />
               <span className='font-poppins'>{nr.displayName}</span>
