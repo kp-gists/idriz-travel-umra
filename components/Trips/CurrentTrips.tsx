@@ -73,7 +73,7 @@ const CurrentTrips = () => {
     <div className='w-full flex flex-col  gap-4 md:gap-y-10 lg:flex-row  md:items-center justify-center  '>
       {isLoading && !isError && LoadingSkeleton}
       {isFetched &&
-        data.data.map((trip: any) => {
+        data?.data?.map((trip: any) => {
           const {
             year,
             departing,
