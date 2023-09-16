@@ -34,7 +34,7 @@ const RamadanUmra = ({ year = 2023 }: Props) => {
           </div>
         </div>
 
-        <div className='absolute top-6 -left-6 -rotate-45 bg-rose-400 text-white p-1 min-w-[120px] text-center text-xs'>
+        <div className='absolute top-4 -left-8 origin-center -rotate-45 bg-gradient-to-tr from-pink-400 via-purple-300 to-rose-300 text-indigo-900 p-1 min-w-[130px] text-center text-sm'>
           Njoftim
         </div>
       </div>

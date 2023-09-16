@@ -1,4 +1,5 @@
-import { contacts } from '@/util/constants';
+import { contacts, googleMaps } from '@/util/constants';
+import Link from 'next/link';
 import React from 'react';
 
 type Props = {};
@@ -11,7 +12,13 @@ const Contact = (props: Props) => {
           <div key={contact.key} className='flex'></div>
         ))}
       </div>
-      <div>google map</div>
+      <div className='w-full'>
+        <Link target='_blank' href={googleMaps.link}>
+          Na gjeni ne Google Maps
+        </Link>
+        <br />
+        {googleMaps.iframe}
+      </div>
     </div>
   );
 };

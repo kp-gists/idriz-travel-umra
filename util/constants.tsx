@@ -40,7 +40,7 @@ export const navLinks = [
   },
 ];
 
-const socialNetworks: SocialNetwork[] = [
+export const socialNetworks: SocialNetwork[] = [
   {
     icon: <Instagram className={defaultClassNames} />,
     key: 'instagram',
@@ -55,6 +55,18 @@ const socialNetworks: SocialNetwork[] = [
   },
 ];
 
+export const googleMaps = {
+  link: 'https://maps.app.goo.gl/84MyrgJ618UkXRT56',
+  iframe: (
+    <iframe
+      src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0372937532825!2d19.810163076569765!3d41.32980239956426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350311b0fdf001b%3A0x4ac6b1f977d00f29!2sIdriz%20Travel%20Umra!5e0!3m2!1sen!2s!4v1694871786909!5m2!1sen!2s'
+      width='600'
+      height='450'
+      loading='lazy'
+    ></iframe>
+  ),
+};
+
 export const contacts: Contact[] = [
   {
     type: 'tel',
@@ -62,6 +74,8 @@ export const contacts: Contact[] = [
     icon: albaniaSrc,
     displayName: '+355 68 5000 533',
     href: 'tel:+355685000533',
+    whatsappLink:
+      'https://api.whatsapp.com/send/?phone=355685000533&text=&type=phone_number&app_absent=0',
   },
   {
     type: 'tel',
@@ -69,6 +83,13 @@ export const contacts: Contact[] = [
     displayName: '+383 493 651 80',
     icon: kosovoSrc,
     href: 'tel:+383 493 651 80',
+  },
+  {
+    type: 'tel',
+    key: 'numri tel arabia Maqedoni',
+    displayName: '+389 71 551 040',
+    icon: macedoniSrc,
+    href: 'tel:+38971551040',
   },
   {
     type: 'tel',
@@ -85,9 +106,6 @@ export const contacts: Contact[] = [
     type: 'email',
   },
 ];
-
-// TODO add the whatsapp for custom message on whatsapp
-export const whatsappLink = '';
 
 export const services = [
   {
@@ -132,38 +150,44 @@ export const packageServices = [
 
 export const neededDocs = [
   'Pasaportë e vlefshme jo më pak se 6 muaj',
-  'Fotografi personale',
+  '2 Fotografi personale',
 ];
 
-const makkahLiveIFrame = ({
-  width = 560,
-  height = 315,
+export const makkahLiveIFrame = ({
+  width = 956,
+  height = 625,
+  className,
 }: {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
+  className?: string;
 }) => (
   <iframe
     width={width}
     height={height}
-    src='https://www.youtube.com/embed/N9QSL1PLUS4?si=lP9sxGCi7ku2w6SS'
+    src='https://www.youtube.com/embed/N9QSL1PLUS4?si=lP9sxGCi7ku2w6SS&autoplay=1&cc_load_policy=1'
     title='YouTube video player'
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     allowFullScreen
+    className={className}
   ></iframe>
 );
-const madinahLiveIFrame = ({
-  width = 560,
-  height = 315,
+export const madinahLiveIFrame = ({
+  width = 800,
+  height = 400,
+  className,
 }: {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
+  className?: string;
 }) => (
   <iframe
     width={width}
     height={height}
     src='https://www.youtube.com/embed/EB0Y1ztWnic?si=y977xBtCcDsGfsg3'
     title='YouTube video player'
-    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allow='accelerometer; autoplay:true; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     allowFullScreen
+    className={className}
   ></iframe>
 );

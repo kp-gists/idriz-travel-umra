@@ -64,9 +64,7 @@ const EjaNeUmreSection = (props: Props) => {
         </div>
       </div>
 
-      <div className='w-full h-full relative  '>
-        <CurrentTrips />
-      </div>
+      <CurrentTrips />
     </section>
   );
 };

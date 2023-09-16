@@ -13,6 +13,8 @@ import UmrahStatistics from '@/components/landing/UmrahStatistics';
 import HolyPlaces from '@/components/landing/HolyPlaces';
 import RamadanUmra from '@/components/notifications/RamadanUmra';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
+import UmreTimeline from '@/components/sections/UmreTimeline';
+import { renderWhatsappLink } from '@/util/functions';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +27,9 @@ export default function Home() {
       <Hero />
 
       <EjaNeUmreSection />
+
+      {/* timeline of the umra, starting performing and return */}
+      <UmreTimeline />
 
       {/* Sherbimet|services */}
       <Services />

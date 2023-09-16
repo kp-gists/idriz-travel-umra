@@ -11,6 +11,7 @@ export type Contact = {
   key: string;
   displayName: string | number;
   href: string;
+  whatsappLink?: string;
 };
 
 export type Months =
@@ -34,6 +35,6 @@ export type UmrahPrice = {
   discounted_value?: number;
   id?: number;
   isDiscounted: boolean;
-  room: 'roomX2' | 'roomX2' | 'roomX2';
+  room: 'roomX2' | 'roomX3' | 'roomX4';
   value: number;
 };
