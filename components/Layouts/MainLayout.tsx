@@ -19,7 +19,7 @@ const MainLayout = ({ children, className }: Props) => {
       <MetaData title='Idriz Çela' />
       <main className={cn(className, 'mainTexture')}>
         <Navbar />
-        <div className='max-w-7xl mx-auto h-full px-6 overflow-hidden'>
+        <div className='max-w-7xl mx-auto h-full px-6  overflow-hidden'>
           {children}
           <Footer />
         </div>

@@ -6,3 +6,50 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.pageMedinaLive{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+
+  .pageMekkaLive{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    padding: 0;
+    align-items: start;
+
+    iframe{
+      width: 100%;
+      height: 230px;
+    }
+  }
+  .pageMedinaLive{
+    position: relative;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: fill;
+    padding: 0;
+    align-items: start;
+
+    iframe{
+      width: 100%;
+      height: 230px;
+    }
+  }
+}
+
+@media  (min-width: 768px) {
+  .pageMekkaLive{
+    background-position: center;
+    background-size: cover ;
+    padding: 24px;
+ 
+  }
+}

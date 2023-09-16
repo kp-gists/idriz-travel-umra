@@ -4,7 +4,7 @@ type Props = {};
 
 // umre timeline cute animations
 const UmreTimeline = (props: Props) => {
-  return <div>{/*  */}</div>;
+  return <div className=''>{/*  */}</div>;
 };
 
 export default UmreTimeline;

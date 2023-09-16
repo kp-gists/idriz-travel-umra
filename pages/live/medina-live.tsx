@@ -9,12 +9,12 @@ const MedinaLive = (props: Props) => {
   return (
     <PageLayout title='Medina Live'>
       <div
-        className='pageMekkaLive flex items-center justify-center'
+        className='pageMedinaLive  flex justify-center items-start md:items-center'
         style={{
           backgroundImage: `url(${medina.src})`,
         }}
       >
-        {madinahLiveIFrame({ height: 600, width: 969 })}
+        {madinahLiveIFrame({ className: 'holyPlaceIframe' })}
       </div>
     </PageLayout>
   );

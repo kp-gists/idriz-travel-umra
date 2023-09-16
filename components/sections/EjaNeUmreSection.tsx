@@ -11,13 +11,14 @@ import {
   indigo_gradiant,
   pink_gradiant,
 } from '@/util/gradients';
+import TitleSection from '../TitleSection';
 
 type Props = {};
 
 const EjaNeUmreSection = (props: Props) => {
   return (
-    <section className='relative flex pt-4 md:pt-0 flex-col justify-center items-center gap-12 my-8 w-full h-full'>
-      <div className='w-full flex-col gap-6 flex md:flex-row items-center'>
+    <section className='relative flex pt-4 md:pt-0 flex-col justify-center items-center gap-12  w-full h-full'>
+      <div className='w-full flex-col gap-6 flex  md:flex-row items-center'>
         <div className='w-full md:w-1/2 z-20 relative flex flex-col'>
           <h1
             className={
@@ -64,7 +65,14 @@ const EjaNeUmreSection = (props: Props) => {
         </div>
       </div>
 
-      <CurrentTrips />
+      <TitleSection
+        hasDivider
+        title='Umre për këtë muaj'
+        subtitle='Eja vizito edhe ti shtepinë e Allahut!'
+        description=''
+      >
+        <CurrentTrips />
+      </TitleSection>
     </section>
   );
 };

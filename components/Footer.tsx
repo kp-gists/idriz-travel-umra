@@ -26,7 +26,7 @@ const Footer = (props: Props) => {
           <div className='md:w-full md:h-full'>
             <p className='font-poppins text-xl font-bold'>Idriz Travel Umrah</p>
             <p className='italic font-semibold text-zinc-600'>
-              Viza - Perkthime - Kurbane
+              Viza - Umre - Perkthime - Kurbane
             </p>
           </div>
         </div>
