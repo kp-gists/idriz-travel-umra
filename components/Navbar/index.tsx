@@ -18,6 +18,8 @@ import Image from 'next/image';
 import { navLinks } from '@/util/constants';
 import { Menu } from 'lucide-react';
 import ListPhoneContact from '../contact/ListPhoneContact';
+import { cn } from '@/lib/utils';
+import MobileMenu from './MobileMenu';
 
 type Props = {};
 
@@ -64,7 +66,7 @@ const Navbar = (props: Props) => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 90) {
+      if (window.scrollY > 400) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -73,11 +75,16 @@ const Navbar = (props: Props) => {
   }, [t]);
 
   return (
-    <nav className='w-full shadow-lg backdrop-blur-sm bg-white/20 '>
+    <nav
+      className={cn(
+        'w-full shadow-lg backdrop-blur-sm bg-white/10 ',
+        isScrolled
+          ? 'sticky top-0 left-0 right-0 z-50 translate-y-0  bg-white/40 transition-all delay-1000 '
+          : 'relative '
+      )}
+    >
       <div className='flex py-2 items-center h-16 justify-between mx-auto px-2 md:px-6  max-w-7xl'>
-        <button className='block md:hidden '>
-          <Menu className='h-8 w-8' />
-        </button>
+        <MobileMenu />
 
         <Link
           href='/'

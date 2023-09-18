@@ -16,10 +16,14 @@ const MainLayout = ({ children, className }: Props) => {
 
   return (
     <>
-      <MetaData title='Idriz Çela' />
+      <MetaData
+        title='Idriz Çela'
+        description={description}
+        keyword={keywords}
+      />
       <main className={cn(className, 'mainTexture')}>
         <Navbar />
-        <div className='max-w-7xl mx-auto h-full px-6  overflow-hidden'>
+        <div className='max-w-7xl mx-auto h-full px-3 md:px-6  overflow-hidden'>
           {children}
           <Footer />
         </div>

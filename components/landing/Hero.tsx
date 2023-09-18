@@ -7,7 +7,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className='relative mb-20'>
+    <div className='relative mb-16'>
       <div className='w-full my-4 relative overflow-hidden '>
         <Image
           src={meccaMedinah}
@@ -15,6 +15,7 @@ const Hero = (props: Props) => {
           alt=''
           loading='lazy'
         />
+        {/* TODO fix the size of the image with resize optimize this */}
         <Image
           src={kaba}
           className='z-50 h-fit visible md:hidden  object-fill w-screen  md:min-w-sm min-h-[200px] rounded-sm '

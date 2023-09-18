@@ -1,17 +1,20 @@
+import { StaticImageData } from 'next/image';
+
 export type SocialNetwork = {
   icon: JSX.Element;
   key: string;
   displayName: string;
   href: string;
+  src: StaticImageData;
 };
 
 export type Contact = {
-  type: 'tel' | 'whatsapp' | 'email';
+  type: 'tel' | 'email';
   icon: StaticImageData;
   key: string;
   displayName: string | number;
   href: string;
-  whatsappLink?: string;
+  whatsappLink?: string | React.JSX.Element;
 };
 
 export type Months =
@@ -37,4 +40,14 @@ export type UmrahPrice = {
   isDiscounted: boolean;
   room: 'roomX2' | 'roomX3' | 'roomX4';
   value: number;
+};
+
+export type ServiceType = 'umrah' | 'visa' | 'translate' | 'kurban';
+
+export type Service = {
+  key: string;
+  type: ServiceType;
+  title: string;
+  description: string;
+  img: StaticImageData | string;
 };

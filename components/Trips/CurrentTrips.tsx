@@ -12,28 +12,32 @@ import muslim from '@/assets/icons/muslim-48.png';
 import { fetchCurrentTrips } from '@/lib/fetching';
 import { Months, UmrahPrice } from '@/types';
 import { allMonths } from '@/util/date';
+import SloganOne from '../landing/SloganOne';
 
 const date = new Date();
 
-const CurrentTrips = () => {
+const CurrentTrips = ({
+  setTitle,
+}: {
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const [isMount, setIsMount] = useState(false);
 
   const currentMonth = allMonths[date.getMonth() + 1] as Months;
   const currentYear = date.getFullYear();
 
-  const { data, isLoading, isError, status, isFetched } = useQuery({
+  const { data, isLoading, isError, status, isFetched, isSuccess } = useQuery({
     queryKey: ['current-trips'],
     queryFn: async () => await fetchCurrentTrips(currentMonth, currentYear),
     retry: 5,
   });
-  console.log(
-    '🚀 ~ file: CurrentTrips.tsx:11 ~ CurrentTrips ~ currentMonth:',
-    data
-  );
 
   useEffect(() => {
     setIsMount(true);
-  }, []);
+    if (isSuccess && data?.data?.length === 0) {
+      setTitle('');
+    }
+  }, [isSuccess]);
 
   if (!isMount) return null;
 
@@ -71,15 +75,13 @@ const CurrentTrips = () => {
 
   return (
     <div className='w-full h-full relative flex-col items-center'>
-      <h1></h1>
-
       <div className='w-full flex flex-col  gap-4 md:gap-y-10 lg:flex-row  md:items-center justify-center  '>
         {isLoading &&
           !isError &&
           Array.from({ length: 3 }).map((_, idx) => (
             <LoadingSkeleton key={idx} />
           ))}
-        {isFetched &&
+        {isFetched && data?.data?.length > 0 ? (
           data?.data?.map((trip: any) => {
             const {
               year,
@@ -183,7 +185,10 @@ const CurrentTrips = () => {
                 </p>
               </div>
             );
-          })}
+          })
+        ) : (
+          <SloganOne isLoading={isLoading} />
+        )}
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ type Props = {};
 
 const EjaNeUmreSection = (props: Props) => {
   return (
-    <section className='relative flex pt-4 md:pt-0 flex-col justify-center items-center gap-12  w-full h-full'>
+    <section className='relative flex  md:pt-0 flex-col justify-center items-center gap-12  w-full h-full'>
       <div className='w-full flex-col gap-6 flex  md:flex-row items-center'>
         <div className='w-full md:w-1/2 z-20 relative flex flex-col'>
           <h1
@@ -48,8 +48,6 @@ const EjaNeUmreSection = (props: Props) => {
               alt=''
               loading='lazy'
             />
-
-            <p></p>
           </div>
           <div
             className={`absolute -z-10 w-[30%] h-[35%] left-0 md:left-1/2 top-0 ${pink_gradiant} `}
@@ -64,15 +62,6 @@ const EjaNeUmreSection = (props: Props) => {
           {/* gradient end */}
         </div>
       </div>
-
-      <TitleSection
-        hasDivider
-        title='Umre për këtë muaj'
-        subtitle='Eja vizito edhe ti shtepinë e Allahut!'
-        description=''
-      >
-        <CurrentTrips />
-      </TitleSection>
     </section>
   );
 };

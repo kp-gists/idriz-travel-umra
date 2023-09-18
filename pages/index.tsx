@@ -15,6 +15,7 @@ import RamadanUmra from '@/components/notifications/RamadanUmra';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
 import UmreTimeline from '@/components/sections/UmreTimeline';
 import { renderWhatsappLink } from '@/util/functions';
+import CurrentUmres from '@/components/sections/CurrentUmres';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,17 +26,13 @@ export default function Home() {
   return (
     <MainLayout className={inter.className}>
       <Hero />
-
       <EjaNeUmreSection />
-
-      {/* timeline of the umra, starting performing and return */}
-      <UmreTimeline />
-
-      {/* Sherbimet|services */}
+      <CurrentUmres />
       <Services />
-
-      {/* Paketat e fundit */}
       <UmrahPackages />
+
+      {/*TODO with confirmation timeline of the umra, starting performing and return */}
+      {/* <UmreTimeline /> */}
 
       {/* Njoftime */}
       <RamadanUmra year={2024} />
@@ -50,6 +47,8 @@ export default function Home() {
 
       {/* social networks Contact */}
       <Contact />
+
+      {/* testimonials */}
 
       {/* list of hotels */}
       <HotelList />

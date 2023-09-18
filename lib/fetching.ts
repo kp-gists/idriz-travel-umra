@@ -33,3 +33,32 @@ export const fetchCurrentTrips = async (month: Months, currentYear: number) => {
     )
     .then((res) => res.data);
 };
+
+export const fetchUmrahTrips = async () => {
+  const qsTrips = qs.stringify(
+    {
+      populate: {
+        price: true,
+        description: true,
+        umrah_hotels: true,
+        umrah_tour_guides: true,
+      },
+      sort: {
+        departing: 'asc',
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+  console.log(
+    '🚀 ~ file: fetching.ts:24 ~ fetchCurrentTrips ~ qsTrips:',
+    qsTrips
+  );
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?${qsTrips}`
+    )
+    .then((res) => res.data);
+};

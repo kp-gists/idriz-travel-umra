@@ -10,7 +10,7 @@ export interface IMetaData {
   author?: string;
   copyright?: string;
   siteName?: string;
-  keyword?: string[];
+  keyword?: string[] | string;
   generator?: string;
   robots?: string;
   ogType?: string;

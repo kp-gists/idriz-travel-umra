@@ -1,5 +1,6 @@
 import React from 'react';
 import ListPhoneContact from '../contact/ListPhoneContact';
+import TitleSection from '../TitleSection';
 
 type Props = {
   year?: number;
@@ -7,7 +8,7 @@ type Props = {
 
 const RamadanUmra = ({ year = 2023 }: Props) => {
   return (
-    <>
+    <TitleSection hasDivider title={`Ramazan ${year}`}>
       <div className='ramadanBg relative rounded-md mx-auto overflow-hidden max-w-[900px] h-[500px] md:h-[400px]  pt-4 pl-4   md:pl-[300px] lg:pt-8 xl:pl-[400px]'>
         <div className='w-full h-full flex relative justify-start flex-col px-2  md:px-0 py-8 pr-8'>
           <div className='mb-12 md:mb-10'>
@@ -38,7 +39,7 @@ const RamadanUmra = ({ year = 2023 }: Props) => {
           Njoftim
         </div>
       </div>
-    </>
+    </TitleSection>
   );
 };
 

@@ -41,7 +41,7 @@ const Services = (props: Props) => {
 
                   <p className='text-sm md:text-md'>{service.description}</p>
 
-                  <Link href={`/#${service.key}`}>
+                  <Link href={`/service/${service.type}`}>
                     <Button
                       variant={'link'}
                       className='absolute bottom-1 right-2 text-indigo-800'

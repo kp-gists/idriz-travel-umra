@@ -60,4 +60,22 @@
   
 }
 
+// google maps location
 
+.googleMapWrapper{
+  iframe{
+    width: 100%;
+  }
+}
+
+// slogan *ne vend te current trips
+
+.sloganBG{
+  background-image: url('/images/texture-kaaba.webp');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 24px;
+  height: fit-content;
+}
