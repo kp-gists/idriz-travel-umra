@@ -22,16 +22,14 @@ export const fetchCurrentTrips = async (month: Months, currentYear: number) => {
       encodeValuesOnly: true, // prettify URL
     }
   );
-  console.log(
-    '🚀 ~ file: fetching.ts:24 ~ fetchCurrentTrips ~ qsCurrentTrips:',
-    qsCurrentTrips
-  );
+
   // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
   return axios
     .get(
       `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?${qsCurrentTrips}`
     )
-    .then((res) => res.data);
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
 };
 
 export const fetchUmrahTrips = async () => {
@@ -40,8 +38,17 @@ export const fetchUmrahTrips = async () => {
       populate: {
         price: true,
         description: true,
-        umrah_hotels: true,
-        umrah_tour_guides: true,
+        umrah_hotels: {
+          populate: {
+            img: true,
+          },
+        },
+        umrah_tour_guides: {
+          populate: {
+            avatar: true,
+            social_networks: true,
+          },
+        },
       },
       sort: {
         departing: 'asc',
@@ -51,14 +58,53 @@ export const fetchUmrahTrips = async () => {
       encodeValuesOnly: true, // prettify URL
     }
   );
-  console.log(
-    '🚀 ~ file: fetching.ts:24 ~ fetchCurrentTrips ~ qsTrips:',
-    qsTrips
-  );
+
   // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
   return axios
     .get(
       `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?${qsTrips}`
     )
-    .then((res) => res.data);
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
+export const fetchUmrahPage = async () => {
+  const qsPage = qs.stringify(
+    {
+      populate: '*',
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/idriz-travel-umra?${qsPage}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
+
+export const fetchServices = async () => {
+  const qsPage = qs.stringify(
+    {
+      populate: {
+        services: {
+          populate: '*',
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/idriz-travel-umra?${qsPage}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
 };

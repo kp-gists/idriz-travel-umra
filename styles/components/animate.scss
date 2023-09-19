@@ -1,12 +1,12 @@
 .airplane{
-  // -webkit-animation: movingplane 10s linear infinite;
-  // -moz-animation: movingplane 10s linear infinite;
-  // -o-animation: movingplane 10s linear infinite;
+  -webkit-animation: takeOff  5s linear infinite;
+  -moz-animation: takeOff  5s linear infinite;
+  -o-animation: takeOff  5s linear infinite;
   position: absolute;
   right: 50px;
   top: 80px;
   transform: scale(-1, 1);
-  animation:  takeOff  4s linear infinite;
+  animation:  takeOff  5s linear infinite;
 }
 
 @keyframes takeOff {
@@ -14,13 +14,10 @@
       right: 0;
       top: 40%;
     }
-    10% {  
-      right: 10%;
-      top: 40%;
-    }
+   
   25% {  
       right: 20%;
-      top: 35%;
+      top: 30%;
     }
  
   50% {  

@@ -1,9 +1,10 @@
+import PageLayout from '@/components/Layouts/PageLayout';
 import { fetchUmrahTrips } from '@/lib/fetching';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
 
 type Props = {
-  umrahTrip: string;
+  umrahTrip: any;
 };
 
 const UmrahTrip = ({ umrahTrip }: Props) => {
@@ -12,7 +13,16 @@ const UmrahTrip = ({ umrahTrip }: Props) => {
     umrahTrip,
     {}
   );
-  return <div>UmrahTrip</div>;
+  const { title } = umrahTrip;
+
+  return (
+    <PageLayout title={umrahTrip.title}>
+      <div className='flex flex-col my-8'>
+        <h1>{umrahTrip.title}</h1>
+        <div>{JSON.stringify(umrahTrip)}</div>
+      </div>
+    </PageLayout>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async (props) => {

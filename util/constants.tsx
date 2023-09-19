@@ -22,22 +22,22 @@ export const navLinks = [
     key: 'home',
   },
   {
-    href: '#packages',
+    href: '/#packages',
     title: 'Paketat',
     key: 'packages',
   },
   {
-    href: '#services',
+    href: '/#services',
     title: 'Shërbimet',
     key: 'services',
   },
   {
-    href: '#about-us',
+    href: '/#about-us',
     title: 'Rreth Nesh',
     key: 'about-us',
   },
   {
-    href: '#contact',
+    href: '/#contact',
     title: 'Kontakt',
     key: 'contact',
   },

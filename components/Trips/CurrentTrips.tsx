@@ -1,6 +1,6 @@
 import { Skeleton } from '@/components/ui/skeleton';
 import { useQuery } from '@tanstack/react-query';
-import { Plane, PlaneTakeoff, X } from 'lucide-react';
+import { MousePointerClick, Plane, PlaneTakeoff, X } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -13,6 +13,8 @@ import { fetchCurrentTrips } from '@/lib/fetching';
 import { Months, UmrahPrice } from '@/types';
 import { allMonths } from '@/util/date';
 import SloganOne from '../landing/SloganOne';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const date = new Date();
 
@@ -89,6 +91,7 @@ const CurrentTrips = ({
               arriving,
               isAvailable,
               price: prices,
+              slug,
             } = trip.attributes;
 
             const inputDeparting = new Date(departing);
@@ -107,7 +110,7 @@ const CurrentTrips = ({
 
             return (
               <div
-                key={trip.slug}
+                key={slug}
                 className='z-10 crownCardBg relative ring ring-indigo-500 shadow-2xl text-white min-w-[300px] w-full md:w-[600px]   rounded-lg'
               >
                 <p className='flex items-center justify-center text-lg drop-shadow-md font-poppins text-center font-bold mb-1'>
@@ -177,10 +180,20 @@ const CurrentTrips = ({
                       );
                     })}
                   </div>
-                  <ListPhoneContact />
+                  <div className='flex justify-around flex-col gap-2 md:flex-row w-full  md:w-fit'>
+                    <ListPhoneContact />
+
+                    <Link
+                      href={`/umrah/${slug}`}
+                      className=' text-indigo-100 px-1 font-bold hover:border flex items-center w-full md:w-fit hover:border-white'
+                    >
+                      më shumë detaje
+                      <MousePointerClick className='h-6 w-8 ' />
+                    </Link>
+                  </div>
                 </div>
 
-                <p className='text-sm font-bold text-white text-right px-4 py-1 ml-auto'>
+                <p className='text-sm font-bold text-white text-right  px-4 py-1 ml-auto'>
                   *Çmimet janë për person
                 </p>
               </div>

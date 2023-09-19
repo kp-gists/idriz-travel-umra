@@ -1,22 +1,28 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import Head from 'next/head';
+import MetaData from '../Metadata';
 
 type Props = {
   children: React.ReactNode;
-  title?: string;
+  title: string;
   description?: string;
   imageUrl?: string;
+  keywords?: string;
 };
 
-const PageLayout = ({ children, title, description, imageUrl }: Props) => {
-  const metaTilte = `${title} | Idriz Çela`;
+const PageLayout = ({
+  children,
+  title,
+  keywords,
+  description,
+  imageUrl,
+}: Props) => {
+  const keyword = keywords + 'umrah, haj, mekka, medina, travel';
+
   return (
     <>
-      <Head>
-        <title>{metaTilte}</title>
-      </Head>
+      <MetaData title={title} description={description} keyword={keyword} />
       <main>
         <Navbar />
 
