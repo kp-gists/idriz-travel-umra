@@ -31,13 +31,13 @@ const TitleSection = ({
       {hasDivider ? <FlowerDivider /> : null}
 
       {subtitle ? (
-        <h1 className='text-center text-indigo-900 text-xl md:text-2xl lg:text-3xl  xl:text-4xl font-medium'>
+        <h1 className='text-center text-indigo-900 text-xl md:text-2xl lg:text-3xl  xl:text-4xl font-thin'>
           {subtitle}
         </h1>
       ) : null}
 
       {description ? (
-        <p className='text-center sm:max-w-xs text-green-100 font-black text-base md:text-xl   shadow-slate-700 lg:w-full'>
+        <p className='text-center sm:max-w-xs text-slate-700 lowercase font-black text-base md:text-xl   shadow-slate-700 lg:w-full'>
           {description}
         </p>
       ) : null}

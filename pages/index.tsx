@@ -15,7 +15,6 @@ import RamadanUmra from '@/components/notifications/RamadanUmra';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
 import UmreTimeline from '@/components/sections/UmreTimeline';
 import CurrentUmres from '@/components/sections/CurrentUmres';
-import RecentUmrahs from '@/components/landing/RecentUmrahs';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,14 +47,11 @@ export default function Home() {
       {/* social networks Contact */}
       <Contact />
 
-      {/* recent Umrah list */}
-      <RecentUmrahs />
-
       {/* list of hotels */}
-      <HotelList />
+      {/* <HotelList /> */}
 
       {/* list of tour guide */}
-      <TourGuideList />
+      {/* <TourGuideList /> */}
     </MainLayout>
   );
 }

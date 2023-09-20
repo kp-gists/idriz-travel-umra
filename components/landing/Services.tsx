@@ -41,6 +41,8 @@ const Services = (props: Props) => {
 
                   <p className='text-sm md:text-md'>{service.description}</p>
 
+                  <div></div>
+
                   <Link href={`/services/${service.type}`}>
                     <Button
                       variant={'link'}

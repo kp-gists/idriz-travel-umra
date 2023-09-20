@@ -10,7 +10,7 @@ export interface IMetaData {
   author?: string;
   copyright?: string;
   siteName?: string;
-  keyword?: string[] | string;
+  keywords?: string;
   generator?: string;
   robots?: string;
   ogType?: string;
@@ -30,6 +30,7 @@ const MetaData: React.FC<IMetaData> = ({
   ogType = 'website',
   twitterCard = 'summary',
   published_time,
+  keywords,
 }) => {
   const { asPath } = useRouter();
 
@@ -46,6 +47,7 @@ const MetaData: React.FC<IMetaData> = ({
       <link rel='author' href='humans.txt' />
       <meta name='title' content={titleWithBrandName} />
       <meta name='description' content={description} />
+      <meta name='keywords' content={keywords} />
       <link rel='canonical' href={canonicalUrl} />
       <meta name='author' content={author} />
       <meta name='copyright' content={copyright} />

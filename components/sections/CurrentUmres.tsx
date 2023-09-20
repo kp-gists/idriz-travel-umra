@@ -11,7 +11,7 @@ const CurrentUmres = () => {
       hasDivider
       title={title}
       subtitle='Eja vizito edhe ti shtepinë e Allahut!'
-      description=''
+      description='Nisemi çdo javë nga Tirana'
       className='mt-20'
     >
       <CurrentTrips setTitle={setTitle} />

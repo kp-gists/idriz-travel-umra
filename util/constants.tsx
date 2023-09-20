@@ -43,6 +43,17 @@ export const navLinks = [
   },
 ];
 
+export const visitingPlaces = [
+  'Mekke',
+  'Medine',
+  'Arafat',
+  'Muzdelefe',
+  'Shpella Hira',
+  '"Kopshti i Xhenetit"',
+];
+
+export const aboutUs = '';
+
 export const socialNetworks: SocialNetwork[] = [
   {
     icon: (
@@ -137,7 +148,7 @@ export const services: Service[] = [
   {
     key: 'service-translate',
     type: 'translate',
-    title: 'Përkthime | Shqip <=> Arabishtë',
+    title: 'Përkthime nga Shqip <=> Arabishtë',
     description:
       'Përkthime të ndryshme sipas nevojës nga Shqip në Arabisht si dhe nga Arabishtja ne shqip',
     img: arabicTranslateSrc,
@@ -146,7 +157,7 @@ export const services: Service[] = [
     key: 'service-kurbane',
     type: 'kurban',
     title: 'Kurbane',
-    description: 'Ju ndihmojme që të prisni Kurbane në cdo kohë në Mekke',
+    description: 'Ju ndihmojme që të prisni Kurbane në çdo kohë në Mekke',
     img: kurbanSrc,
   },
 ];

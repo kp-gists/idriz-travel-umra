@@ -1,4 +1,5 @@
 import PageLayout from '@/components/Layouts/PageLayout';
+import RecentUmrahs from '@/components/landing/RecentUmrahs';
 import { fetchTripBySlug, fetchUmrahTrips } from '@/lib/fetching';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
@@ -20,7 +21,8 @@ const UmrahPage = (props: Props) => {
       title='All Our Umrah'
       description='list of our umrahs traveled.'
     >
-      <div>UmrahPage {}</div>
+      {/* recent Umrah list */}
+      <RecentUmrahs />
     </PageLayout>
   );
 };
