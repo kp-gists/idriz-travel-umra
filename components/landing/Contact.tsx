@@ -63,7 +63,7 @@ const Contact = (props: Props) => {
 
         <div className='flex flex-col items-center my-8 '>
           <h1 className='font-poppins text-md md:text-3xl bg-indigo-300 px-2 py-0.5 font-bold text-center'>
-            Jemi shume active ne rrjetet sociale
+            Na gjeni në rrjetet sociale:
           </h1>
           <div className='flex flex-col md:flex-row mt-6 gap-6 '>
             {socialNetworks.map((sn) => (
