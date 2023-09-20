@@ -8,16 +8,10 @@ type Props = {
 };
 
 const UmrahTrip = ({ umrahTrip }: Props) => {
-  console.log(
-    '🚀 ~ file: [slug].tsx:9 ~ UmrahTrip ~ umrahTrip:',
-    umrahTrip,
-    {}
-  );
-
   return (
-    <PageLayout title={umrahTrip.title}>
+    <PageLayout title={umrahTrip?.title}>
       <div className='flex flex-col my-8'>
-        <h1>{umrahTrip.title}</h1>
+        <h1>{umrahTrip?.title}</h1>
         <div>{JSON.stringify(umrahTrip)}</div>
       </div>
     </PageLayout>
@@ -48,10 +42,11 @@ export const getStaticPaths: GetStaticPaths = async (props) => {
 
 export const getStaticProps: GetStaticProps = async (props) => {
   const slug: string = props?.params?.slug as string;
-  console.log(
-    '🚀 ~ file: [[...slug]].tsx:51 ~ constgetStaticProps:GetStaticProps= ~ slug:',
-    slug
-  );
+
+  if (!slug)
+    return {
+      notFound: true,
+    };
 
   const umrahs = await fetchUmrahTrips();
 

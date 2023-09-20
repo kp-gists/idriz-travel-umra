@@ -13,7 +13,7 @@ type Props = {
 
 const PageLayout = ({
   children,
-  title,
+  title = 'Umre',
   keywords,
   description,
   imageUrl,
