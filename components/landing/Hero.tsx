@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import kaba from '@/assets/imgs/kaba.jpg';
+import kaba from '@/assets/imgs/kaba.webp';
 import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
 
 type Props = {};
@@ -13,14 +13,13 @@ const Hero = (props: Props) => {
           src={meccaMedinah}
           className='z-50 h-fit hidden md:visible object-cover md:block  md:object-contain w-screen  md:min-w-sm min-h-[200px] rounded-xl '
           alt=''
-          loading='lazy'
+          loading='eager'
         />
-        {/* TODO fix the size of the image with resize optimize this */}
         <Image
           src={kaba}
           className='z-50 h-fit visible md:hidden  object-fill w-screen  md:min-w-sm min-h-[200px] rounded-sm '
           alt=''
-          loading='lazy'
+          loading='eager'
         />
       </div>
     </div>
