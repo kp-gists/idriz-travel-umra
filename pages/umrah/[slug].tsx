@@ -13,7 +13,6 @@ const UmrahTrip = ({ umrahTrip }: Props) => {
     umrahTrip,
     {}
   );
-  const { title } = umrahTrip;
 
   return (
     <PageLayout title={umrahTrip.title}>
@@ -50,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async (props) => {
 export const getStaticProps: GetStaticProps = async (props) => {
   const slug: string = props?.params?.slug as string;
   console.log(
-    '🚀 ~ file: [slug].tsx:46 ~ constgetStaticProps:GetStaticProps= ~ slug:',
+    '🚀 ~ file: [[...slug]].tsx:51 ~ constgetStaticProps:GetStaticProps= ~ slug:',
     slug
   );
 
@@ -60,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
     (umrah: any) => umrah.attributes.slug === slug
   );
 
-  if (umrahTrip?.length) {
+  if (umrahTrip?.length > 0) {
     return {
       props: {
         umrahTrip: umrahTrip[0].attributes,

@@ -1,5 +1,5 @@
 import PageLayout from '@/components/Layouts/PageLayout';
-import { fetchUmrahTrips } from '@/lib/fetching';
+import { fetchTripBySlug, fetchUmrahTrips } from '@/lib/fetching';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
@@ -12,6 +12,9 @@ const UmrahPage = (props: Props) => {
     retry: 5,
   });
   console.log('🚀 ~ file: index.tsx:14 ~ UmrahPage ~ data:', data);
+
+  const singleTrip = fetchTripBySlug('umrah-tetor-nentor-2023');
+  console.log('🚀 ~ file: index.tsx:17 ~ UmrahPage ~ singleTrip:', singleTrip);
   return (
     <PageLayout
       title='All Our Umrah'

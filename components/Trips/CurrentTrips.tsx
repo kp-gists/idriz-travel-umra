@@ -180,14 +180,14 @@ const CurrentTrips = ({
                       );
                     })}
                   </div>
-                  <div className='flex justify-around flex-col gap-2 md:flex-row w-full  md:w-fit'>
+                  <div className='flex justify-around flex-col gap-2  w-full  '>
                     <ListPhoneContact />
 
                     <Link
                       href={`/umrah/${slug}`}
-                      className=' text-indigo-100 px-1 font-bold hover:border flex items-center w-full md:w-fit hover:border-white'
+                      className=' text-indigo-100 px-2 py-1  font-bold hover:border flex items-center justify-end border-transparent border rounded-md  w-full  hover:border-white'
                     >
-                      më shumë detaje
+                      ...më shumë detaje
                       <MousePointerClick className='h-6 w-8 ' />
                     </Link>
                   </div>

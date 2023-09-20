@@ -32,6 +32,53 @@ export const fetchCurrentTrips = async (month: Months, currentYear: number) => {
     .catch((e) => console.log({ e }));
 };
 
+export const fetchTripById = async (id: number) => {
+  const qsCurrentTrips = qs.stringify(
+    {
+      populate: {
+        price: true,
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips/${id}?${qsCurrentTrips}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
+
+export const fetchTripBySlug = async (slug: string) => {
+  const qsCurrentTrips = qs.stringify(
+    {
+      populate: {
+        price: true,
+      },
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?${qsCurrentTrips}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
+
 export const fetchUmrahTrips = async () => {
   const qsTrips = qs.stringify(
     {

@@ -12,14 +12,22 @@ import Image from 'next/image';
 import { PhoneForwarded } from 'lucide-react';
 import { Button } from '../ui/button';
 
-const ListPhoneContact = () => {
+type Props = {
+  title?: string | React.JSX.Element;
+};
+
+const ListPhoneContact = ({ title = 'Rezervo Tani' }: Props) => {
   const phoneNrs = contacts.filter((item) => item.type === 'tel');
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant={'cta'} size={'cta'} className='w-full md:w-fit'>
-          Rezervo Tani
+        <Button
+          variant={'cta'}
+          size={'cta'}
+          className='w-full flex items-center gap-x-2 '
+        >
+          {title}
         </Button>
       </DropdownMenuTrigger>
 

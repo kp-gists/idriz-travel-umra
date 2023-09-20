@@ -12,6 +12,7 @@ import {
   pink_gradiant,
 } from '@/util/gradients';
 import TitleSection from '../TitleSection';
+import ListPhoneContact from '../contact/ListPhoneContact';
 
 type Props = {};
 
@@ -27,16 +28,17 @@ const EjaNeUmreSection = (props: Props) => {
           >
             Eja edhe ti në Umre!
           </h1>
-          <h2 className='text-center text-2xl font-sans font-semibold text-gray-800'>
+          <h2 className='text-center text-2xl font-sans font-semibold text-gray-800 mb-4'>
             Vizito vendet e shenjta <strong>Mekke</strong>,{' '}
             <strong>Medinah</strong>,<strong>Arafat</strong>
           </h2>
-          <Button
-            variant='cta'
-            className='my-2 bg-indigo-500 hover:bg-indigo-600 w-full md:w-44 mx-auto'
-          >
-            <Phone className='h-4 w-4 mr-2' /> Telefono Tani
-          </Button>
+          <ListPhoneContact
+            title={
+              <>
+                <Phone className='h-4 w-4 mr-2' /> Telefono Tani
+              </>
+            }
+          />
         </div>
 
         <div className='w-full md:w-1/2 '>
