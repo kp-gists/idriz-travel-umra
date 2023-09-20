@@ -22,7 +22,7 @@ const PageLayout = ({
 
   return (
     <>
-      <MetaData title={title} description={description} keyword={keyword} />
+      <MetaData title={title} description={description} keywords={keyword} />
       <main>
         <Navbar />
 
