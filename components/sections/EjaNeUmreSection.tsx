@@ -17,7 +17,7 @@ const EjaNeUmreSection = (props: Props) => {
   return (
     <section className='relative md:pt-0  w-full h-full'>
       <div className='w-full  gap-6 flex flex-col  md:flex-row items-center justify-center'>
-        <div className='relative w-full md:w-1/2 z-20 h-full  flex flex-col justify-between p-8'>
+        <div className='relative w-full md:w-1/2 z-20 h-full  flex flex-col justify-between px-1 py-8 md:px-8'>
           <div className='h-full w-full text-center flex flex-col gap-y-2 pb-8 '>
             <h1
               className={
@@ -27,8 +27,9 @@ const EjaNeUmreSection = (props: Props) => {
               Eja edhe ti në Umre!
             </h1>
 
-            <p className='font-hand text-2xl pb-8'>
-              “Kryeni haxhin dhe umren për hir të Allahut…” [El Bekare: 196.]
+            <p className='font-hand text-lg md:text-2xl pb-8'>
+              “Kryeni haxhin dhe umren për hir të Allahut…”{' '}
+              <br className='block md:hidden' /> [El Bekare: 196.]
             </p>
 
             <h2 className='text-center text-2xl font-sans font-semibold text-gray-800 pb-2'>
