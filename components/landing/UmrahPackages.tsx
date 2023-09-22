@@ -14,7 +14,7 @@ const UmrahPackages = (props: Props) => {
       subtitle='Çfarë përmban paketa e umres?'
     >
       <div className='flex flex-col md:flex-row'>
-        <div id='packages' className='grid grid-cols-3 gap-4 mt-8'>
+        <div id='packages' className='flex flex-wrap gap-8 mt-8'>
           {packageServices.map((service) => (
             <div
               key={service.key}

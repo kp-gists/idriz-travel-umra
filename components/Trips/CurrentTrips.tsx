@@ -184,7 +184,8 @@ const CurrentTrips = ({
                     <ListPhoneContact />
 
                     <Link
-                      href={`/umrah/${slug}`}
+                      href={`/`}
+                      // href={`/umrah/${slug}`}
                       className=' text-indigo-100 px-2 py-1  font-bold hover:border flex items-center justify-end border-transparent border rounded-md  w-full  hover:border-white'
                     >
                       ...më shumë detaje

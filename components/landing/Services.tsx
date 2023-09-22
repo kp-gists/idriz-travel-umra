@@ -46,6 +46,7 @@ const Services = (props: Props) => {
                   <Link href={`/services/${service.type}`}>
                     <Button
                       variant={'link'}
+                      disabled
                       className='absolute bottom-1 right-2 text-indigo-800'
                     >
                       ...më shumë detaje
