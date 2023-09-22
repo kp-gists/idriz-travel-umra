@@ -22,7 +22,7 @@ const Services = (props: Props) => {
             return (
               <div
                 key={service.key}
-                className='serviceCard ring w-full md:w-[550px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
+                className='serviceCard ring w-full md:w-[550px] xl:w-[600px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
               >
                 <div className='h-28 w-40  relative'>
                   <Image
@@ -48,7 +48,7 @@ const Services = (props: Props) => {
                       variant={'link'}
                       className='absolute bottom-1 right-2 text-indigo-800'
                     >
-                      më shumë detaje <MousePointerClick className='h-6 w-8' />
+                      ...më shumë detaje
                     </Button>
                   </Link>
                 </div>

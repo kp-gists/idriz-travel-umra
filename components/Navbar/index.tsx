@@ -56,7 +56,7 @@ const Navbar = (props: Props) => {
         <Link
           key={link.key}
           href={link.href}
-          className='capitalize font-semibold text-md hover:underline'
+          className='capitalize font-semibold text-md border-b-2 border-transparent hover:border-gray-300 hover:text-green-500'
         >
           {link.title}
         </Link>
@@ -79,7 +79,7 @@ const Navbar = (props: Props) => {
       className={cn(
         'w-full shadow-lg backdrop-blur-sm bg-white/10 ',
         isScrolled
-          ? 'sticky top-0 left-0 right-0 z-50 translate-y-0  bg-white/40 transition-all delay-1000 '
+          ? 'sticky top-0 left-0 right-0 z-50 translate-y-0  bg-white/60 transition-all delay-1000 '
           : 'relative '
       )}
     >

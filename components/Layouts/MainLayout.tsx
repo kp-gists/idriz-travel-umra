@@ -21,7 +21,7 @@ const MainLayout = ({ children, className }: Props) => {
         description={description}
         keywords={keywords}
       />
-      <main className={cn(className, 'mainTexture')}>
+      <main className={cn(className, '')}>
         <Navbar />
         <div className='max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden'>
           {children}

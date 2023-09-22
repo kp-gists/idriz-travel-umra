@@ -54,11 +54,11 @@ const MobileMenu = (props: Props) => {
 
         {socialNetworks.map((sn) => (
           <Link href={sn.href} key={sn.key} target='_blank'>
-            <div className='flex flex-col items-center justify-start hover:underline'>
-              <p className='text-md md:text-lg flex mb-4'>
+            <ul className='flex flex-col items-center justify-start hover:underline'>
+              <li className='text-md font-poppins flex mb-4'>
                 {sn.icon} {sn.displayName}
-              </p>
-            </div>
+              </li>
+            </ul>
           </Link>
         ))}
 
