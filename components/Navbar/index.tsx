@@ -89,7 +89,7 @@ const Navbar = (props: Props) => {
         <Link
           href='/'
           className='flex gap-x-0 md:gap-x-2'
-          title='Idriz Travel Umrah'
+          title='Idriz Travel Umra'
         >
           <Image
             src={passport}
@@ -100,7 +100,7 @@ const Navbar = (props: Props) => {
             loading='eager'
           />
           <div className='hidden lg:flex flex-col items-center justify-center'>
-            <p className='text-lg font-bold '>Idriz Travel Umrah</p>
+            <p className='text-lg font-bold '>Idriz Travel Umra</p>
           </div>
         </Link>
         {menu}

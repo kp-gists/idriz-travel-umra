@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-const version = '0.0.1';
+const version = '1.0.0';
 
 export interface IMetaData {
   title: string;
@@ -34,7 +34,7 @@ const MetaData: React.FC<IMetaData> = ({
 }) => {
   const { asPath } = useRouter();
 
-  const url = '';
+  const url = 'https://idriztravelumra.com';
   const canonicalUrl = url + asPath;
   const titleWithBrandName = `${title} | Travel Umra`;
 
