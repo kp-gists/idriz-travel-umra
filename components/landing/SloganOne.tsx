@@ -27,7 +27,7 @@ const SloganOne = ({ isLoading }: Props) => {
 
       <div className='w-full flex flex-col gap-y-4 h-full  items-center justify-start relative'>
         <h1 className='text-center w-full font-poppins text-2xl mt-6 mb-2 font-bold text-slate-800'>
-          Nisemi cdo jave nga Tirana
+          Nisemi çdo javë nga Tirana!
         </h1>
         <div className='w-[360px] md:w-[720px] lg:[900px]   flex justify-between items-center h-[200px] relative '>
           <div>

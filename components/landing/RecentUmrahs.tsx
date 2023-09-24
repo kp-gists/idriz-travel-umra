@@ -14,33 +14,25 @@ const RecentUmrahs = (props: Props) => {
     queryFn: async () => await fetchUmrahTrips(),
     retry: 5,
   });
-  console.log('🚀 ~ file: RecentUmrahs.tsx:16 ~ RecentUmrahs ~ data:', data);
 
   if (isError) return null;
 
   return (
     <div id='recent-umrahs'>
       <SloganOne isLoading={false} />
-      <div className='max-w-7xl mx-auto'>
+
+      <div className='max-w-7xl mx-auto py-8'>
         {isLoading ? (
           'loading'
         ) : (
-          <TitleSection title='' hasDivider className='mt-8'>
+          <TitleSection title='Udhëtimen Tona' hasDivider className='mt-8'>
             {/* list */}
-            <div className='w-full '>
+            <div className='w-full p-4'>
               {data?.data?.length > 0 ? (
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-4'>
                   {data?.data?.slice(0, 8).map((trip: any) => (
                     <TripCard key={trip.id} trip={trip.attributes} />
                   ))}
-                  <TripCard
-                    trip={{
-                      title: 'Nisemi cdo jave nga Tirana',
-                      slug: '',
-                      departing: false,
-                      arriving: false,
-                    }}
-                  />
                 </div>
               ) : (
                 ''

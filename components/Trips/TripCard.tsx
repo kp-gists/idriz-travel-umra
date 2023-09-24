@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import medal from '@/assets/art/vecteezy_luxury-golden-ornamenta.webp';
 import { convertDate } from '@/util/date';
-import { MousePointerClick, Plane } from 'lucide-react';
+import { BadgeEuro, Clock, MousePointerClick, Plane } from 'lucide-react';
 import Link from 'next/link';
 
 type Props = {
@@ -10,6 +10,10 @@ type Props = {
 };
 
 const TripCard = ({ trip }: Props) => {
+  const cmimi = trip?.price?.find((price: any) => price.room === 'roomX2');
+
+  const lowPrice = cmimi ? cmimi.value : 990;
+
   return (
     <article className='border border-indigo-200 bg-indigo-300 drop-shadow-md shadow-inner shadow-indigo-500 rounded-lg  px-4 py-3  '>
       <div className='flex flex-row gap-x-4 items-center mb-4'>
@@ -50,6 +54,17 @@ const TripCard = ({ trip }: Props) => {
             </strong>
           </p>
         ) : null}
+      </div>
+
+      <div className='w-full py-1'>
+        <p className='flex items-center justify-end text-sm w-full border-t-gray-300 pt-1 border-t '>
+          <Clock className='h-5 w-5 mr-2 ' /> Qëndrimi:{' 11 ditë'}
+        </p>
+
+        <p className='flex items-center  text-sm mt-2 px-2 py-1 rounded-md bg-blue-200/50'>
+          <BadgeEuro className='h-5 w-5 mr-2 text-slate-900 ' /> Çmimet fillojne
+          nga: {lowPrice}€
+        </p>
       </div>
 
       <Link
