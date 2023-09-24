@@ -5,7 +5,7 @@ import CurrentTrips from '../Trips/CurrentTrips';
 const defaultTitle = 'Umre për këtë muaj';
 
 const CurrentUmres = () => {
-  const [title, setTitle] = useState('Umre për këtë muaj');
+  const [title, setTitle] = useState('Ofertat e Fundit');
   return (
     <TitleSection
       hasDivider

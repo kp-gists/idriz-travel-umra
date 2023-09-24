@@ -3,6 +3,8 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import MetaData from '../Metadata';
 import { cn } from '@/lib/utils';
+import ScrollTop from '../ScrollTop';
+import WhatsappContact from '../contact/WhatsappContact';
 
 type Props = {
   children: React.ReactNode;
@@ -21,11 +23,16 @@ const MainLayout = ({ children, className }: Props) => {
         description={description}
         keywords={keywords}
       />
-      <main className={cn(className, '')}>
+      <main className={cn(className, 'relative w-full')}>
         <Navbar />
+
         <div className='max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden'>
           {children}
           <Footer />
+        </div>
+        <ScrollTop />
+        <div className='sticky bottom-5 w-14 h-14 p-1 left-full z-[10001] '>
+          <WhatsappContact />
         </div>
       </main>
     </>

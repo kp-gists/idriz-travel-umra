@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
         />
         <Image
           src={idrizTravel}
-          className='  z-40 h-fit hidden md:visible  md:block  object-fill absolute top-8 right-8 rounded-sm w-[185px]'
+          className='z-40 h-fit hidden md:visible  md:block  object-fill absolute  md:top-4 md:right-4 lg:top-8 lg:right-8 rounded-sm md:w-[100px] lg:w-[185px]'
           alt=''
           loading='eager'
         />

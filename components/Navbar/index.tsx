@@ -104,7 +104,7 @@ const Navbar = (props: Props) => {
           </div>
         </Link>
         {menu}
-        <div>
+        <div className=''>
           <ListPhoneContact />
           {isMultiLanguage && dropdown}
         </div>

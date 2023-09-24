@@ -14,7 +14,8 @@ export type Contact = {
   key: string;
   displayName: string | number;
   href: string;
-  whatsappLink?: string | React.JSX.Element;
+  whatsappLink: string | React.JSX.Element;
+  whatsappLinkString: string;
 };
 
 export type Months =

@@ -35,6 +35,21 @@ export const renderWhatsappLink = ({
     </Link>
   );
 };
+export const renderWhatsappLinkString = ({
+  displayText,
+  nr,
+  text = 'Selam alejkum 👋',
+  size = 'large',
+}: {
+  nr: number;
+  text?: string;
+  displayText?: string;
+  size?: 'small' | 'large';
+}) => {
+  const encoded = encodeURIComponent(text);
+
+  return `https://api.whatsapp.com/send/?phone=${nr}&text=${encoded}&type=phone_number&app_absent=0`;
+};
 
 export const iconStyle = 'h-8 w-8';
 
