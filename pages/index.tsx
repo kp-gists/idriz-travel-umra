@@ -1,14 +1,13 @@
-import { Inter } from 'next/font/google';
-import useTranslation from 'next-translate/useTranslation';
-import { useEffect } from 'react';
 import MainLayout from '@/components/Layouts/MainLayout';
-import Hero from '@/components/landing/Hero';
-import UmrahPackages from '@/components/landing/UmrahPackages';
-import Services from '@/components/landing/Services';
 import AbutUs from '@/components/landing/AbutUs';
 import Contact from '@/components/landing/Contact';
+import Hero from '@/components/landing/Hero';
+import Services from '@/components/landing/Services';
+import UmrahPackages from '@/components/landing/UmrahPackages';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
-import CurrentUmres from '@/components/sections/CurrentUmres';
+import useTranslation from 'next-translate/useTranslation';
+import { Inter } from 'next/font/google';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,13 +20,13 @@ export default function Home() {
       <Hero />
       <Services />
       <EjaNeUmreSection />
-      <CurrentUmres />
+
+      {/* to fix with current offers */}
+
       <UmrahPackages />
 
-      {/* rreth nesh */}
+      {/*TODO rreth nesh */}
       <AbutUs />
-
-      {/* social networks Contact */}
       <Contact />
     </MainLayout>
   );

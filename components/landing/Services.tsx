@@ -1,11 +1,9 @@
-import { services } from '@/util/constants';
 import Image from 'next/image';
-import React from 'react';
-import { Button } from '../ui/button';
-import floralDivider from '@/assets/art/Groupfloral-divider.svg';
-import { ArrowRight, MousePointerClick } from 'lucide-react';
 import Link from 'next/link';
-import TitleSection from '../TitleSection';
+
+import { services } from '@/util/constants';
+import { Button } from '@/components/ui/button';
+import TitleSection from '@/components/TitleSection';
 
 type Props = {};
 
@@ -17,7 +15,7 @@ const Services = (props: Props) => {
           id='services'
           className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6'
         >
-          {/*  */}
+          {/* make the pages */}
           {services.map((service) => {
             return (
               <div

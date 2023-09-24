@@ -4,9 +4,7 @@ import kaba from '@/assets/imgs/kaba.webp';
 import meccaMedinah from '@/assets/imgs/mecca-medinah.jpg';
 import idrizTravel from '@/assets/imgs/idriz-travel-umre.webp';
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className='relative mb-16'>
       <div className='w-full my-4 relative overflow-hidden '>

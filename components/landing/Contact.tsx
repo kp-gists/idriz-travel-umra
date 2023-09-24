@@ -1,8 +1,9 @@
-import { contacts, googleMaps, socialNetworks } from '@/util/constants';
 import Link from 'next/link';
 import React from 'react';
-import TitleSection from '../TitleSection';
 import { Mail, MapPin } from 'lucide-react';
+
+import { contacts, googleMaps, socialNetworks } from '@/util/constants';
+import TitleSection from '@/components/TitleSection';
 
 type Props = {};
 

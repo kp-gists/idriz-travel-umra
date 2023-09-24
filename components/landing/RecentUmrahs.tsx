@@ -20,32 +20,34 @@ const RecentUmrahs = (props: Props) => {
   return (
     <div id='recent-umrahs'>
       <SloganOne isLoading={false} />
-      {isLoading ? (
-        'loading'
-      ) : (
-        <TitleSection title='' hasDivider className='mt-8'>
-          {/* list */}
-          <div className='w-full '>
-            {data?.data?.length > 0 ? (
-              <div className='flex flex-wrap gap-8'>
-                {data?.data?.slice(0, 8).map((trip: any) => (
-                  <TripCard key={trip.id} trip={trip.attributes} />
-                ))}
-                <TripCard
-                  trip={{
-                    title: 'Nisemi cdo jave nga Tirana',
-                    slug: '',
-                    departing: false,
-                    arriving: false,
-                  }}
-                />
-              </div>
-            ) : (
-              ''
-            )}
-          </div>
-        </TitleSection>
-      )}
+      <div className='max-w-7xl mx-auto'>
+        {isLoading ? (
+          'loading'
+        ) : (
+          <TitleSection title='' hasDivider className='mt-8'>
+            {/* list */}
+            <div className='w-full '>
+              {data?.data?.length > 0 ? (
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                  {data?.data?.slice(0, 8).map((trip: any) => (
+                    <TripCard key={trip.id} trip={trip.attributes} />
+                  ))}
+                  <TripCard
+                    trip={{
+                      title: 'Nisemi cdo jave nga Tirana',
+                      slug: '',
+                      departing: false,
+                      arriving: false,
+                    }}
+                  />
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
+          </TitleSection>
+        )}
+      </div>
     </div>
   );
 };

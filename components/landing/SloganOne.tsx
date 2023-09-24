@@ -67,7 +67,9 @@ const SloganOne = ({ isLoading }: Props) => {
             Behu pjese i nje nga grupeve tona edhe sebashku te nisemi drejt
             vendeve te shenjta
           </p>
-          <ListPhoneContact />
+          <div>
+            <ListPhoneContact />
+          </div>
         </div>
       </div>
     </div>

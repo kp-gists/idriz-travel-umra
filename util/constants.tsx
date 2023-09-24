@@ -88,6 +88,7 @@ export const googleMaps = {
       width='600'
       height='450'
       loading='lazy'
+      title='Idriz Travel Umra location'
     ></iframe>
   ),
 };
@@ -157,14 +158,16 @@ export const services: Service[] = [
     key: 'service-umrah',
     type: 'umrah',
     title: 'Eja edhe ti në Umre',
-    description: 'Udhetime për në vendet e shenjta Mekke & Medinah',
+    description:
+      'Kryerja e ritualit të umres. Udhetime për në vendet e shenjta Mekke & Medinah. Cmimet më konkurese në treg',
     img: umrahSrc,
   },
   {
     key: 'service-viza',
     type: 'visa',
     title: 'Viza për në Arabinë Saudite',
-    description: 'Çdo llojë vizë për në Arabinë Saudite',
+    description:
+      'Çdo llojë vizë për në Arabinë Saudite. Vizë biznesi, pune, personale dhe egalizime dokumentash prane ambasades Arabise Saudite',
     img: vizaSrc,
   },
   {
@@ -172,7 +175,7 @@ export const services: Service[] = [
     type: 'translate',
     title: 'Përkthime nga Shqip <=> Arabishtë',
     description:
-      'Përkthime të ndryshme sipas nevojës nga Shqip në Arabisht si dhe nga Arabishtja ne shqip',
+      'Përkthime të ndryshme sipas nevojës nga Shqip në Arabisht si dhe nga Arabishtja ne shqip. Dokumente zyrtare edhe personale',
     img: arabicTranslateSrc,
   },
   {
@@ -267,7 +270,7 @@ export const makkahLiveIFrame = ({
     width={width}
     height={height}
     src='https://www.youtube.com/embed/N9QSL1PLUS4?si=lP9sxGCi7ku2w6SS&autoplay=1&cc_load_policy=1'
-    title='YouTube video player'
+    title='YouTube video player makkah live'
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     allowFullScreen
     className={className}
@@ -286,7 +289,7 @@ export const madinahLiveIFrame = ({
     width={width}
     height={height}
     src='https://www.youtube.com/embed/EB0Y1ztWnic?si=y977xBtCcDsGfsg3&autoplay=1&cc_load_policy=1'
-    title='YouTube video player'
+    title='YouTube video player makkah live'
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     allowFullScreen
     className={className}
