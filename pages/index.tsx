@@ -1,20 +1,16 @@
 import MainLayout from '@/components/Layouts/MainLayout';
 import AbutUs from '@/components/landing/AbutUs';
+import ActionButtons from '@/components/landing/ActionButtons';
 import Contact from '@/components/landing/Contact';
 import Hero from '@/components/landing/Hero';
 import Services from '@/components/landing/Services';
 import UmrahPackages from '@/components/landing/UmrahPackages';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
-import useTranslation from 'next-translate/useTranslation';
 import { Inter } from 'next/font/google';
-import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const { t, lang } = useTranslation('common');
-
-  useEffect(() => {}, [t]);
   return (
     <MainLayout className={inter.className}>
       <Hero />
@@ -27,6 +23,9 @@ export default function Home() {
 
       {/*TODO rreth nesh */}
       <AbutUs />
+
+      {/* TODO cta btns */}
+      <ActionButtons />
       <Contact />
     </MainLayout>
   );

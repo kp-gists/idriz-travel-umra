@@ -36,7 +36,7 @@ const MetaData: React.FC<IMetaData> = ({
 
   const url = 'https://idriztravelumra.com';
   const canonicalUrl = url + asPath;
-  const titleWithBrandName = `${title} | Travel Umra`;
+  const titleWithBrandName = `${title} | Idriz Travel Umra`;
 
   return (
     <Head>

@@ -4,6 +4,7 @@ import SloganOne from '@/components/landing/SloganOne';
 import { useQuery } from '@tanstack/react-query';
 import { fetchUmrahTrips } from '@/lib/fetching';
 import TripCard from '@/components/Trips/TripCard';
+import { GetServerSideProps } from 'next';
 
 type Props = {};
 
@@ -50,6 +51,12 @@ const RecentUmrahs = (props: Props) => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {},
+  };
 };
 
 export default RecentUmrahs;

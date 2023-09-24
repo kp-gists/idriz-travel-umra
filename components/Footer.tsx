@@ -3,7 +3,7 @@ import CWK from './CWK';
 import Image from 'next/image';
 
 import idrizTravel from '@/assets/imgs/idriz-travel-umre.jpg';
-import { GanttChart, HelpingHand, Home } from 'lucide-react';
+import { GanttChart, HelpingHand, Home, ListTodo } from 'lucide-react';
 import Link from 'next/link';
 
 type Props = {};
@@ -31,7 +31,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
 
-        <ul className='flex flex-col gap-3 mb-8 md:mb-0 justify-center md:justify-start md:items-center md:flex-row font-poppins'>
+        <ul className='flex flex-col gap-4 mb-8 md:mb-0 justify-center md:justify-start md:items-center md:flex-row font-poppins'>
           <Link href='/'>
             <li className='flex text-md text-zinc-900 '>
               <Home className='h-6 w-6 text-zinc-500 mr-2' /> Kreu
@@ -45,6 +45,12 @@ const Footer = (props: Props) => {
           <Link href='/#services'>
             <li className='flex text-md ml-16 md:ml-0'>
               <HelpingHand className='h-6 w-6 text-zinc-500 mr-2' /> Sherbimet
+            </li>
+          </Link>
+
+          <Link href='/umrah'>
+            <li className='flex text-md ml-20 md:ml-0'>
+              <ListTodo className='h-6 w-6 text-zinc-500 mr-2' /> Lista Umra
             </li>
           </Link>
         </ul>
