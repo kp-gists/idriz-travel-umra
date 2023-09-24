@@ -69,6 +69,10 @@ const MetaData: React.FC<IMetaData> = ({
       <meta property='og:url' content={url} />
       <meta property='og:site_name' content={siteName} />
       <meta property='og:locale' content='en' />
+      <meta
+        name='google-site-verification'
+        content='QN_KzbkLtZ8FDyINvnLZnmd8kbpqh6Y91s5laQBmRog'
+      />
       <link
         type='text/plain'
         rel='author'
