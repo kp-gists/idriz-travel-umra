@@ -58,6 +58,24 @@ export const fetchTripBySlug = async (slug: string) => {
     {
       populate: {
         price: true,
+        description: true,
+        image: true,
+        umrah_hotels: {
+          populate: {
+            img: true,
+          },
+        },
+        umrah_tour_guides: {
+          populate: {
+            avatar: true,
+            social_networks: true,
+          },
+        },
+        seo: {
+          populate: {
+            meta_img: true,
+          },
+        },
       },
       filters: {
         slug: {

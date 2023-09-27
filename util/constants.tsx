@@ -34,9 +34,9 @@ export const navLinks = [
     key: 'services',
   },
   {
-    href: '/#about-us',
-    title: 'Rreth Nesh',
-    key: 'about-us',
+    href: '/umrah',
+    title: 'Umra Tona',
+    key: 'umra-page',
   },
   {
     href: '/#contact',
@@ -46,12 +46,28 @@ export const navLinks = [
 ];
 
 export const visitingPlaces = [
-  'Mekke',
-  'Medine',
-  'Arafat',
-  'Muzdelefe',
-  'Shpella Hira',
-  '"Kopshti i Xhenetit"',
+  {
+    key: 'mekke',
+    items: [
+      'Mekke - Qabja e Madhnueshme',
+      'Mali Theur',
+      'Arafat',
+      'Muzdelife',
+      'Mina',
+      'Xhemarat',
+      'Shpella Hira',
+    ],
+  },
+  {
+    key: 'medine',
+    items: [
+      'Medine - Xhamia e Profetit(a.s)',
+      '"Kopshti i Xhenetit"',
+      'Xhamia Kuba',
+      'Mali Uhud',
+      'Xhamia me dy kible',
+    ],
+  },
 ];
 
 export const aboutUs = '';

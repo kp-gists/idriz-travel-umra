@@ -7,3 +7,4 @@ Host: https://idriztravelumra.com/
 
 # Sitemaps
 Sitemap: https://idriztravelumra.com/sitemap.xml
+Sitemap: https://idriztravelumra.com/sitemap-0.xml

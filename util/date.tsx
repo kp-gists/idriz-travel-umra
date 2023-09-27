@@ -18,10 +18,10 @@ export const convertDate = (date: string) => {
 
   const input = new Date(date);
 
-  const formattedDepartingDate = new Intl.DateTimeFormat('sq-AL', {
+  const formattedTravelDate = new Intl.DateTimeFormat('sq-AL', {
     day: 'numeric',
     month: 'long',
   }).format(input);
 
-  return formattedDepartingDate;
+  return formattedTravelDate;
 };

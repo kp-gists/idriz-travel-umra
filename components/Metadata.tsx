@@ -21,7 +21,7 @@ export interface IMetaData {
 const MetaData: React.FC<IMetaData> = ({
   title = 'Idriz Çela Travel Umra',
   image = 'https://strapi-cwk.s3.eu-south-1.amazonaws.com/idriz_travel_umre_c3bfebbe0b.jpg',
-  description = '“Idriz Travel Umra” është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite',
+  description = 'Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite, umre, viza, perkthime, kurbane',
   author = 'CWK Team',
   copyright = 'Sokol Paja',
   siteName = 'Idriz Travel Umra',

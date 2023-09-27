@@ -12,9 +12,9 @@ type Props = {
 };
 
 const MainLayout = ({ children, className }: Props) => {
-  const description = `“Idriz Travel Umra” është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite`;
+  const description = `Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane`;
 
-  const keywords = `Haxhi i Umres, Paketa të Umres, Kërkesat për Umre, Viza për Umre, Umra 2023, Udhëzuesi për Umre, Udhëtimi i Umres, Ritualet e Umres, Udhëtimi i Umres, Fluturimet për Umre, Hotele për Umre, Lista e kontrolleve për Umre, Kostot e Umres, Datat e Umres, Hapat e Umres, Agjentët e Umres, Rezervimi i Umres, Namazi i Umres, Kodi i veshjes për Umre, Këshillat për Umre, Grupi i Umres, Procesi i vizave për Umre, Haxhi i Umres 2023, Agjencia e udhëtimit për Umre, Fluturimet dhe hotelet për Umre.`;
+  const keywords = `Paketa umre,mekka, medina,Kërkesat për umre,Viza umre,Ritualet umres,Udhëtimi i umres, Fluturimet umre, Hotele umre,Rezervimi i umres,Fluturimet hotelet umra`;
 
   return (
     <>

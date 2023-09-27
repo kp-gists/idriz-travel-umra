@@ -10,12 +10,12 @@ type Props = {
 };
 
 const TripCard = ({ trip }: Props) => {
-  const cmimi = trip?.price?.find((price: any) => price.room === 'roomX2');
+  const cmimi = trip?.price?.find((price: any) => price.room === 'roomX4');
 
   const lowPrice = cmimi ? cmimi.value : 990;
 
   return (
-    <article className='border border-indigo-200 bg-indigo-300 drop-shadow-md shadow-inner shadow-indigo-500 rounded-lg  px-4 py-3  '>
+    <article className='border border-indigo-200 bg-indigo-100 drop-shadow-md shadow-inner shadow-indigo-500 rounded-lg  px-4 py-3  '>
       <div className='flex flex-row gap-x-4 items-center mb-4'>
         <div>
           <Image
@@ -61,7 +61,7 @@ const TripCard = ({ trip }: Props) => {
           <Clock className='h-5 w-5 mr-2 ' /> Qëndrimi:{' 11 ditë'}
         </p>
 
-        <p className='flex items-center  text-sm mt-2 px-2 py-1 rounded-md bg-blue-200/50'>
+        <p className='flex items-center w-fit  text-sm mt-2 px-2 py-1 rounded-md bg-blue-200/50'>
           <BadgeEuro className='h-5 w-5 mr-2 text-slate-900 ' /> Çmimet fillojne
           nga: {lowPrice}€
         </p>

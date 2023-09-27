@@ -27,25 +27,10 @@ const EjaNeUmreSection = (props: Props) => {
               Eja edhe ti në Umre!
             </h1>
 
-            <p className='font-hand text-lg md:text-2xl pb-8'>
+            <p className='font-hand text-lg md:text-2xl pb-2'>
               “Kryeni haxhin dhe umren për hir të Allahut…”{' '}
               <br className='block md:hidden' /> [El Bekare: 196.]
             </p>
-
-            <h2 className='text-center text-2xl font-sans font-semibold text-gray-800 pb-2'>
-              Udhëtimi i jetës ne vendet e shenjta:
-            </h2>
-            <ol className='flex flex-col md:flex-row justify-around gap-4 pb-4 flex-wrap'>
-              {visitingPlaces.map((place) => (
-                <li
-                  key={place}
-                  className='flex items-center text-md font-poppins'
-                >
-                  <CheckSquare className='h-4 w-4 text-green-600 mr-1' />{' '}
-                  {place}
-                </li>
-              ))}
-            </ol>
           </div>
 
           <div className='max-w-[300px] absolute bottom-0 right-1/2 translate-x-1/2'>

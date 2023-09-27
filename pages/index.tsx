@@ -1,3 +1,5 @@
+import { Inter } from 'next/font/google';
+
 import MainLayout from '@/components/Layouts/MainLayout';
 import AbutUs from '@/components/landing/AbutUs';
 import ActionButtons from '@/components/landing/ActionButtons';
@@ -5,8 +7,8 @@ import Contact from '@/components/landing/Contact';
 import Hero from '@/components/landing/Hero';
 import Services from '@/components/landing/Services';
 import UmrahPackages from '@/components/landing/UmrahPackages';
+import VisitingPlaces from '@/components/landing/VisitingPlaces';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
-import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero />
       <Services />
       <EjaNeUmreSection />
+
+      <VisitingPlaces />
 
       {/* to fix with current offers */}
 
