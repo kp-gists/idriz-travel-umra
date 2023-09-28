@@ -35,7 +35,7 @@ export const navLinks = [
   },
   {
     href: '/umrah',
-    title: 'Umra Tona',
+    title: 'Umret Tona',
     key: 'umra-page',
   },
   {

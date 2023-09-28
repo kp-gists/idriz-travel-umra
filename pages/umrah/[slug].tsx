@@ -21,7 +21,6 @@ type Props = {
 };
 
 const UmrahTrip = ({ umra }: Props) => {
-  console.log('🚀 ~ file: [slug].tsx:16 ~ UmrahTrip ~ umra:', umra);
   const metaImage =
     umra?.image?.data === null
       ? imgUmraThumb
@@ -54,7 +53,7 @@ const UmrahTrip = ({ umra }: Props) => {
               width={32}
               height={32}
             />
-            {umra.title}
+            {umra?.title}
           </h1>
 
           <div className='py-4 px-4 max-w'>
@@ -67,15 +66,24 @@ const UmrahTrip = ({ umra }: Props) => {
 
             <div className='flex gap-x-6 gap-y-4'>
               <h3>
-                <strong>Nisja:</strong> {convertDate(umra.departing)}
+                <strong>Nisja: </strong>
+                <time
+                  dateTime={umra?.departing as any}
+                  suppressHydrationWarning
+                >
+                  {convertDate(umra?.departing)}
+                </time>
               </h3>
               <h3>
-                <strong>Kthimi:</strong> {convertDate(umra.arriving)}
+                <strong>Kthimi: </strong>
+                <time dateTime={umra?.arriving as any} suppressHydrationWarning>
+                  {convertDate(umra?.arriving)}
+                </time>
               </h3>
             </div>
           </div>
 
-          <div>
+          <div className='pt-8'>
             <h2 className='text-center mb-4 font-semibold text-lg flex items-center justify-center'>
               Çmimet E Hoteleve{' '}
               <Image
@@ -85,7 +93,7 @@ const UmrahTrip = ({ umra }: Props) => {
               />
             </h2>
             <div className='flex items-center justify-around w-full lg:w-fit px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3'>
-              {umra.price.map((price: UmrahPrice) => {
+              {umra?.price?.map((price: UmrahPrice) => {
                 return (
                   <div
                     key={price.id}

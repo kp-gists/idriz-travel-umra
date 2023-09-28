@@ -13,22 +13,21 @@ const Services = (props: Props) => {
       <section className=''>
         <div
           id='services'
-          className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6'
+          className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-16'
         >
           {/* make the pages */}
           {services.map((service) => {
             return (
               <div
                 key={service.key}
-                className='serviceCard ring w-full md:w-[550px] xl:w-[600px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
+                className='serviceCard ring w-full md:w-[550px] xl:w-[600px] 2xl:w-[750px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
               >
                 <div className='h-28 w-40  relative'>
                   <Image
                     src={service.img}
                     alt={service.description}
-                    fill
                     className='rounded-md'
-                    loading='lazy'
+                    priority
                   />
                 </div>
 

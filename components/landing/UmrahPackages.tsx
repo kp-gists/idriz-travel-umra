@@ -8,14 +8,14 @@ type Props = {};
 
 const UmrahPackages = (props: Props) => {
   return (
-    <section id='packages' className='pt-32'>
+    <section id='packages' className='pt-8'>
       <TitleSection
         hasDivider
         title='Paketa e Umres'
         subtitle='Çfarë përmban paketa e umres?'
       >
         <div className='flex flex-col md:flex-row py-8'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
             {packageServices.map((service) => (
               <div
                 key={service.key}

@@ -14,7 +14,7 @@ type Props = {
 const MainLayout = ({ children, className }: Props) => {
   const description = `Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane`;
 
-  const keywords = `Paketa umre,mekka, medina,Kërkesat për umre,Viza umre,Ritualet umres,Udhëtimi i umres, Fluturimet umre, Hotele umre,Rezervimi i umres,Fluturimet hotelet umra`;
+  const keywords = `umreja, Paketa umre,mekka, medina,Kërkesat për umre,Viza umre,Ritualet umres,Udhëtimi i umres, Fluturimet umre, Hotele umre,Rezervimi i umres,Fluturimet hotelet umra`;
 
   return (
     <>

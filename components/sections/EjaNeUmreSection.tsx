@@ -15,7 +15,7 @@ type Props = {};
 
 const EjaNeUmreSection = (props: Props) => {
   return (
-    <section className='relative md:pt-0  w-full h-full'>
+    <section className='relative md:pt-0  w-full h-full pb-20'>
       <div className='w-full  gap-6 flex flex-col  md:flex-row items-center justify-center'>
         <div className='relative w-full md:w-1/2 z-20 h-full  flex flex-col justify-between px-1 py-8 md:px-8'>
           <div className='h-full w-full text-center flex flex-col gap-y-2 pb-8 '>
