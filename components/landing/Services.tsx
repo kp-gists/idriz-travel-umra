@@ -24,22 +24,27 @@ const Services = (props: Props) => {
                 key={service.key}
                 className='serviceCard ring w-full md:w-[550px] xl:w-[600px] 2xl:w-[750px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
               >
-                <Image
-                  src={service.img}
-                  alt={service.description}
-                  className='rounded-md aspect-square'
-                  loading='eager'
-                  width={180}
-                  height={180}
-                  priority
-                />
+                <div>
+                  <Image
+                    src={service.img}
+                    alt={service.description}
+                    className='rounded-md '
+                    loading='eager'
+                    priority
+                    sizes='(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw'
+                    width={180}
+                    height={180}
+                  />
+                </div>
 
                 <div className='flex flex-col w-full items-start gap-2 justify-between pl-4 pb-6 md:pl-8'>
-                  <h1 className='font-poppins font-semibold tracking-wide text-lg md:text-2xl leading-relaxed'>
+                  <h1 className='font-poppins font-semibold tracking-wide text-md sm:text-lg md:text-xl leading-relaxed'>
                     {service.title}
                   </h1>
 
-                  <p className='text-md md:text-lg'>{service.description}</p>
+                  <p className='text-sm md:text-md'>{service.description}</p>
 
                   <Link href={`/services/${service.type}`}>
                     <Button
