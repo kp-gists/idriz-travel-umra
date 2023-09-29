@@ -40,12 +40,12 @@ const UmrahTrip = ({ umra }: Props) => {
     <PageLayout title={umra?.title} keywords='' imageUrl={metaImage}>
       <div className='flex flex-col items-center justify-center px-4 my-8 lg:flex-row max-w-6xl mx-auto'>
         {/* image oferte with zoom in full */}
-        <div className='  mx-auto lg:mx-0  overflow-hidden w-full'>
+        <div className='  mx-auto lg:mx-0  overflow-hidden w-full shadow-2xl border rounded-md'>
           <UmraImageCarousel items={getImages()} />
         </div>
 
         {/* details */}
-        <div className='py-4 px-3 '>
+        <div className='py-8 px-3 '>
           <h1 className='capitalize text-lg md:text-xl lg:text-2xl font-semibold flex items-center gap-x-2'>
             <Image
               src={ihramCouple}
