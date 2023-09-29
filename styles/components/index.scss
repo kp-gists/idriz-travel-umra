@@ -1,2 +1,8 @@
 @import './cards.scss';
 @import './animate.scss';
+
+// custom
+
+.image-gallery-slide .image-gallery-image {
+  object-fit: fill;
+}

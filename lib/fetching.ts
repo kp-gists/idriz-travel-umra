@@ -132,10 +132,21 @@ export const fetchUmrahTrips = async () => {
     .then((res) => res.data)
     .catch((e) => console.log({ e }));
 };
+
 export const fetchUmrahPage = async () => {
   const qsPage = qs.stringify(
     {
-      populate: '*',
+      populate: {
+        oferta: {
+          populate: {
+            umrah_trips: {
+              populate: {
+                image: true,
+              },
+            },
+          },
+        },
+      },
     },
     {
       encodeValuesOnly: true, // prettify URL

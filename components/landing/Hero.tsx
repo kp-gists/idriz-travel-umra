@@ -17,7 +17,7 @@ const Hero = () => {
         />
         <Image
           src={idrizTravel}
-          className='z-40 h-fit hidden md:visible  md:block  object-fill absolute  md:top-4 md:right-4 lg:top-8 lg:right-8 rounded-sm md:w-[100px] lg:w-[185px]'
+          className='z-40 h-fit hidden md:visible  md:block  object-fill absolute  md:top-4 md:right-4 lg:top-6 lg:right-6 xl:top-8 xl:right-8 rounded-sm md:w-[100px] lg:w-[140px]  xl:w-[185px]'
           alt=''
           loading='eager'
         />

@@ -20,13 +20,13 @@ export interface IMetaData {
 
 const MetaData: React.FC<IMetaData> = ({
   title = 'Idriz Çela Travel Umra',
-  image = 'https://strapi-cwk.s3.eu-south-1.amazonaws.com/idriz_travel_umre_c3bfebbe0b.jpg',
+  image = 'https://idriztravelumra.com/images/idriz-travel-umre.webp',
   description = 'Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite, umre, viza, perkthime, kurbane',
   author = 'CWK Team',
   copyright = 'Sokol Paja',
   siteName = 'Idriz Travel Umra',
   generator = 'NextJS',
-  robots = 'all',
+  robots = 'index,follow',
   ogType = 'website',
   twitterCard = 'summary',
   published_time,
@@ -37,6 +37,29 @@ const MetaData: React.FC<IMetaData> = ({
   const url = 'https://idriztravelumra.com';
   const canonicalUrl = url + asPath;
   const titleWithBrandName = `${title} | Idriz Travel Umra`;
+
+  const structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'Person',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tirana',
+      addressRegion: 'AL',
+      postalCode: '1001',
+      streetAddress: 'Mbrapa Ministrise Arsimit, Rruga Kont Urani,Tirana 1001',
+    },
+    colleague: ['http://codewithkoli.com'],
+    email: 'travelidriz@gmail.com',
+    image: 'janedoe.jpg',
+    jobTitle: 'Travel Umra, Mekke, Medina',
+    name: 'Idriz Travel Umra',
+    telephone: '+355685000533',
+    url: 'https://idriztravelumra.com/',
+    sameAs: [
+      'https://www.instagram.com/idriztravelumra',
+      'https://www.facebook.com/IdrizTravelUmra',
+    ],
+  };
 
   return (
     <Head>
@@ -62,13 +85,18 @@ const MetaData: React.FC<IMetaData> = ({
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={image} />
       <meta name='twitter:url' content={url} />
+      <link rel='icon' href='https://idriztravelumra.com/favicon.ico'></link>
       <meta property='og:type' content={ogType} />
       <meta property='og:title' content={titleWithBrandName} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={image} />
+      <meta property='og:image:alt' content={titleWithBrandName} />
+      <meta property='og:image:type' content='image/webp' />
+      <meta property='og:image:width' content='663' />
+      <meta property='og:image:height' content='410' />
       <meta property='og:url' content={url} />
-      <meta property='og:site_name' content={siteName} />
-      <meta property='og:locale' content='en' />
+      <meta property='og:site_name' content={titleWithBrandName} />
+      <meta property='og:locale' content='sq-AL' />
       <meta
         name='google-site-verification'
         content='QN_KzbkLtZ8FDyINvnLZnmd8kbpqh6Y91s5laQBmRog'
@@ -78,6 +106,15 @@ const MetaData: React.FC<IMetaData> = ({
         rel='author'
         href='https://codewithkoli.com/humans.txt'
       />
+      <link rel='manifest' href='/manifest.json' />
+      <meta name='msapplication-TileColor' content='#ffffff' />
+      <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      ></script>
       {published_time && (
         <meta property='article:published_time' content={published_time} />
       )}
@@ -134,9 +171,6 @@ const MetaData: React.FC<IMetaData> = ({
         sizes='16x16'
         href='/favicon-16x16.png'
       />
-      <link rel='manifest' href='/manifest.json' />
-      <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
     </Head>
   );
 };

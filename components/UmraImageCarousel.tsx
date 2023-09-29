@@ -24,9 +24,10 @@ const UmraImageCarousel = ({ items }: Props) => {
   return (
     <div className='p-4 '>
       <ImageGallery
+        showNav
+        useBrowserFullscreen
         items={renderImages as ReactImageGalleryItem[]}
         showThumbnails={false}
-        onClick={(e) => console.log({ e })}
         autoPlay={false}
         showPlayButton={false}
       />

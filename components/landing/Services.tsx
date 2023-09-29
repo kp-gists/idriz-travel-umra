@@ -9,12 +9,14 @@ type Props = {};
 
 const Services = (props: Props) => {
   return (
-    <TitleSection title='Sherbimet Tona' hasDivider subtitle=''>
-      <section className=''>
-        <div
-          id='services'
-          className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-16'
-        >
+    <section className='' id='services'>
+      <TitleSection
+        title='Sherbimet Tona'
+        hasDivider
+        subtitle=''
+        className='pt-28'
+      >
+        <div className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-16'>
           {/* make the pages */}
           {services.map((service) => {
             return (
@@ -54,8 +56,8 @@ const Services = (props: Props) => {
             );
           })}
         </div>
-      </section>
-    </TitleSection>
+      </TitleSection>
+    </section>
   );
 };
 

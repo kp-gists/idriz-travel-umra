@@ -37,10 +37,10 @@ const UmrahTrip = ({ umra }: Props) => {
   };
 
   return (
-    <PageLayout title={''} keywords='' imageUrl={metaImage}>
-      <div className='flex flex-col px-4 my-8 lg:flex-row max-w-6xl mx-auto'>
+    <PageLayout title={umra?.title} keywords='' imageUrl={metaImage}>
+      <div className='flex flex-col items-center justify-center px-4 my-8 lg:flex-row max-w-6xl mx-auto'>
         {/* image oferte with zoom in full */}
-        <div className='max-w-sm sm:max-w-sm mx-auto lg:mx-0  overflow-hidden md:max-w-md lg:max-w-sm'>
+        <div className='  mx-auto lg:mx-0  overflow-hidden w-full'>
           <UmraImageCarousel items={getImages()} />
         </div>
 
@@ -92,7 +92,8 @@ const UmrahTrip = ({ umra }: Props) => {
                 alt='hotelet ne mekke edhe medine'
               />
             </h2>
-            <div className='flex items-center justify-around w-full lg:w-fit px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3'>
+
+            <div className='flex flex-col md:flex-row gap-4 items-center justify-around w-full  px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3'>
               {umra?.price?.map((price: UmrahPrice) => {
                 return (
                   <div
