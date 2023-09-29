@@ -103,6 +103,10 @@ const MetaData: React.FC<IMetaData> = ({
         name='google-site-verification'
         content='QN_KzbkLtZ8FDyINvnLZnmd8kbpqh6Y91s5laQBmRog'
       />
+      <meta
+        name='google-site-verification'
+        content='quW196cHrFArC_qVJs6VJpsE_WNe6WrurqaKx8LvxYk'
+      />
       <link
         type='text/plain'
         rel='author'
