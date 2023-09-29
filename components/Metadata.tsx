@@ -46,7 +46,8 @@ const MetaData: React.FC<IMetaData> = ({
       addressLocality: 'Tirana',
       addressRegion: 'AL',
       postalCode: '1001',
-      streetAddress: 'Mbrapa Ministrise Arsimit, Rruga Kont Urani,Tirana 1001',
+      streetAddress:
+        'Rr. Kont Urani, Pas Ministrisë së Arsimit 1001 Tirana, Albania, Tirana, Albania, 1001',
     },
     colleague: ['http://codewithkoli.com'],
     email: 'travelidriz@gmail.com',
@@ -66,6 +67,7 @@ const MetaData: React.FC<IMetaData> = ({
       <title>{titleWithBrandName}</title>
       <meta charSet='utf-8' />
       <meta name='app:version' content={version} />
+      <meta property='fb:app_id' content='498646846907796'></meta>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link rel='author' href='humans.txt' />
       <meta name='title' content={titleWithBrandName} />

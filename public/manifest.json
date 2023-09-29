@@ -1,5 +1,19 @@
 {
- "name": "Idriz Travel Umrah",
+ "name": "Idriz Travel Umra",
+ "short_name":"Umra Travel",
+ "start_url": "/",
+"display": "standalone",
+"orientation": "portrait",
+ "theme_color": "#fff",
+ "description": "Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane. Oferta Umre.Mundeson vizita në Mekke • Medine • Arafat • Muzdelife • Mina • Hira • Kuba • Uhud • Masjid Profetit (a.s)",
+"lang": "sq-Al",
+"categories": [
+"travel umra",
+"islam",
+"Mekka",
+"Medina",
+"Hajj & Umra"
+],
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
