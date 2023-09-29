@@ -23,7 +23,7 @@ const TitleSection = ({
       className={`${className} flex flex-col gap-4 items-center h-full w-full  mb-20 md:mb-48`}
     >
       {title ? (
-        <h2 className='font-poppins text-md md:text-3xl  px-2 py-0.5 font-bold text-center'>
+        <h2 className='font-poppins text-md md:text-3xl  px-2 py-0.5 font-semibold text-center leading-loose tracking-wide'>
           {title}
         </h2>
       ) : null}

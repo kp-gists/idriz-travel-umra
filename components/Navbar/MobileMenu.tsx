@@ -26,7 +26,11 @@ const MobileMenu = (props: Props) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className='block md:hidden ' onClick={openSheet}>
+        <button
+          className='block md:hidden '
+          title='Toggle mobile menu links'
+          onClick={openSheet}
+        >
           <Menu className='h-8 w-8' />
         </button>
       </SheetTrigger>

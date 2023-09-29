@@ -54,7 +54,13 @@ export const renderWhatsappLinkString = ({
 export const iconStyle = 'h-8 w-8';
 
 const renderImgIcon = (src: any) => (
-  <Image src={src} className={iconStyle} alt='icon from list' />
+  <Image
+    src={src}
+    className={iconStyle}
+    alt='icon from list'
+    width={32}
+    height={32}
+  />
 );
 
 const iconsMap: Record<string, JSX.Element> = {

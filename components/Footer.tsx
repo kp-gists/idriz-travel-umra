@@ -32,27 +32,36 @@ const Footer = (props: Props) => {
         </div>
 
         <ul className='flex flex-col gap-4 mb-8 md:mb-0 justify-center md:justify-start md:items-center md:flex-row font-poppins'>
-          <Link href='/'>
-            <li className='flex text-md text-zinc-900 '>
+          <li>
+            <Link href='/' className='flex text-md text-zinc-900 '>
               <Home className='h-6 w-6 text-zinc-500 mr-2' /> Kreu
-            </li>
-          </Link>
-          <Link href='/#packages'>
-            <li className='flex text-md ml-8 md:ml-0'>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href='https://idriztravelumra.com#packages'
+              className='flex text-md ml-8 md:ml-0'
+            >
               <GanttChart className='h-6 w-6 text-zinc-500 mr-2' /> Paketat
-            </li>
-          </Link>
-          <Link href='/#services'>
-            <li className='flex text-md ml-16 md:ml-0'>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href='https://idriztravelumra.com#services'
+              className='flex text-md ml-16 md:ml-0'
+            >
               <HelpingHand className='h-6 w-6 text-zinc-500 mr-2' /> Sherbimet
-            </li>
-          </Link>
+            </Link>
+          </li>
 
-          <Link href='/umrah'>
-            <li className='flex text-md ml-20 md:ml-0'>
+          <li>
+            <Link
+              href='https://idriztravelumra.com/umrah'
+              className='flex text-md ml-20 md:ml-0'
+            >
               <ListTodo className='h-6 w-6 text-zinc-500 mr-2' /> Lista Umra
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
       </div>
 

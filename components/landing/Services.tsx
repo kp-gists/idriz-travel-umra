@@ -24,17 +24,20 @@ const Services = (props: Props) => {
                 key={service.key}
                 className='serviceCard ring w-full md:w-[550px] xl:w-[600px] 2xl:w-[750px] h-[200px] rounded-md flex flex-row justify-between items-center mb-10 px-4 md:pl-20 py-6  relative'
               >
-                <div className='h-28 w-40  relative'>
+                <div className='  relative w-fit'>
                   <Image
                     src={service.img}
                     alt={service.description}
-                    className='rounded-md'
+                    className='rounded-md aspect-auto'
+                    loading='eager'
+                    width={180}
+                    height={180}
                     priority
                   />
                 </div>
 
                 <div className='flex flex-col w-full items-start gap-2 justify-between pl-4 pb-6 md:pl-8'>
-                  <h1 className='font-poppins font-bold text-lg md:text-xl'>
+                  <h1 className='font-poppins font-semibold tracking-wide text-lg md:text-2xl leading-relaxed'>
                     {service.title}
                   </h1>
 

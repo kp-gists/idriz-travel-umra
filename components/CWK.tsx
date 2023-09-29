@@ -11,7 +11,7 @@ const CWK = () => {
         <Link
           href='https://codewithkoli.com/'
           target='_blank'
-          className='text-cyan-500 font-bold'
+          className='text-blue-900 font-bold'
         >
           @CodeWithKoli
         </Link>
