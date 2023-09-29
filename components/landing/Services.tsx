@@ -40,11 +40,13 @@ const Services = (props: Props) => {
                 </div>
 
                 <div className='flex flex-col w-full items-start gap-2 justify-between pl-4 pb-6 md:pl-8'>
-                  <h1 className='font-poppins font-semibold tracking-wide text-md sm:text-lg md:text-xl leading-relaxed'>
+                  <h1 className='font-poppins font-semibold tracking-wide text-base sm:text-lg md:text-2xl leading-relaxed'>
                     {service.title}
                   </h1>
 
-                  <p className='text-sm md:text-md'>{service.description}</p>
+                  <p className='text-xs sm:text-sm md:text-md'>
+                    {service.description}
+                  </p>
 
                   <Link href={`/services/${service.type}`}>
                     <Button
