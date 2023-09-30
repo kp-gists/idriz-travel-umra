@@ -4,8 +4,9 @@ import RecentUmrahs from '@/components/landing/RecentUmrahs';
 const UmrahPage = () => {
   return (
     <PageLayout
-      title='All Our Umrah'
-      description='list of our umrahs traveled.'
+      title='Umre Tona'
+      description='list of our umras traveled. visiting muslim hly palces dates, travel, hotels, guide, mekkah, meddina, qaaba'
+      keywords='mekka, medina, umra, umre travel, qabja, qabe, Profeti Muhamed a.s, Allahume Lebejjk'
     >
       {/* recent Umrah list */}
       <RecentUmrahs />

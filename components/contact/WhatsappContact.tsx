@@ -47,7 +47,9 @@ const WhatsappContact = ({ title = 'Rezervo Tani' }: Props) => {
               <Image
                 src={nr.icon}
                 alt={`${nr?.displayName}`}
-                className='h-10 w-10 rounded-lg'
+                className='rounded-lg'
+                width={40}
+                height={40}
                 loading='eager'
               />
               <MessageCircle className='text-green-700 w-6 h-6 fill-green-50' />

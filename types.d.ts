@@ -10,7 +10,7 @@ export type SocialNetwork = {
 
 export type Contact = {
   type: 'tel' | 'email';
-  icon: StaticImageData;
+  icon: StaticImageData | string;
   key: string;
   displayName: string | number;
   href: string;

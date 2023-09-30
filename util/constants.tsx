@@ -5,11 +5,6 @@ import vizaSrc from '@/assets/icons/visa.png';
 import kurbanSrc from '@/assets/icons/kurban.jpg';
 import arabicTranslateSrc from '@/assets/icons/arabic_translate.png';
 
-import albaniaSrc from '@/assets/icons/albania(1).webp';
-import kosovoSrc from '@/assets/icons/kosovo.webp';
-import macedoniSrc from '@/assets/icons/republic-of-macedonia.webp';
-import saudiSrc from '@/assets/icons/saudi-arabia.webp';
-
 import gmailSrc from '@/assets/icons/gmail.png';
 import facebook from '@/assets/imgs/idriz-travel-umra-facebook.webp';
 import instagram from '@/assets/imgs/idriz-travel-umra-instagram.webp';
@@ -113,7 +108,7 @@ export const contacts: Contact[] = [
   {
     type: 'tel',
     key: 'Shqiperi',
-    icon: albaniaSrc,
+    icon: 'https://cdn.ipwhois.io/flags/al.svg',
     displayName: '+355 68 5000 533',
     href: 'tel:+355685000533',
     whatsappLink: renderWhatsappLink({ nr: 355685000533, size: 'small' }),
@@ -126,7 +121,7 @@ export const contacts: Contact[] = [
     type: 'tel',
     key: 'Kosova',
     displayName: '+383 493 651 80',
-    icon: kosovoSrc,
+    icon: 'https://cdn.ipwhois.io/flags/xk.svg',
     href: 'tel:+38349365180',
     whatsappLink: renderWhatsappLink({ nr: 38349365180, size: 'small' }),
     whatsappLinkString: renderWhatsappLinkString({
@@ -138,7 +133,7 @@ export const contacts: Contact[] = [
     type: 'tel',
     key: 'Maqedoni',
     displayName: '+389 71 551 040',
-    icon: macedoniSrc,
+    icon: 'https://cdn.ipwhois.io/flags/mk.svg',
     href: 'tel:+38971551040',
     whatsappLink: renderWhatsappLink({ nr: 38971551040, size: 'small' }),
     whatsappLinkString: renderWhatsappLinkString({
@@ -150,7 +145,7 @@ export const contacts: Contact[] = [
     type: 'tel',
     key: 'Arabia Saudite',
     displayName: '+966 56 693 2725',
-    icon: saudiSrc,
+    icon: 'https://cdn.ipwhois.io/flags/sa.svg',
     href: 'tel:+966566932725',
     whatsappLink: renderWhatsappLink({ nr: 966566932725, size: 'small' }),
     whatsappLinkString: renderWhatsappLinkString({
