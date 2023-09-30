@@ -68,7 +68,7 @@ const TripCard = ({ trip }: Props) => {
       </div>
 
       <Link
-        href={`/umrah/${trip.slug}`}
+        href={`https://idriztravelumra.com/umra/${trip.slug}`}
         className='flex items-center mt-4 justify-end w-full'
       >
         ...më shumë detaje <MousePointerClick className='h-6 w-8' />

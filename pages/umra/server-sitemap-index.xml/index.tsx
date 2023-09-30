@@ -7,7 +7,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const trips = await fetchUmrahTrips();
 
   const paths: ISitemapField[] = trips.data.data.map((item: any) => ({
-    loc: `https://idriztravelumra.com/umrah/${item.attributes.slug}`,
+    loc: `https://idriztravelumra.com/umra/${item.attributes.slug}`,
     lastmod: new Date().toISOString(),
     changefreq: 'weekly',
   }));

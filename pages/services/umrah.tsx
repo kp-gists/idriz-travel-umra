@@ -1,6 +1,6 @@
 import PageLayout from '@/components/Layouts/PageLayout';
 import { fetchServices } from '@/lib/fetching';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps } from 'next';
 import React from 'react';
 
 type Props = {
