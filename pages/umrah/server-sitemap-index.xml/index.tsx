@@ -9,7 +9,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const paths: ISitemapField[] = trips.data.data.map((item: any) => ({
     loc: `https://idriztravelumra.com/umrah/${item.attributes.slug}`,
     lastmod: new Date().toISOString(),
-    changefreq: 'monthly',
+    changefreq: 'weekly',
   }));
 
   return getServerSideSitemapLegacy(ctx, paths);

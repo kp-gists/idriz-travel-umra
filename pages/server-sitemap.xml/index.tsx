@@ -7,9 +7,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   return getServerSideSitemapLegacy(ctx, [
     {
-      loc: 'https://idriztravelumra.com/',
+      loc: 'https://idriztravelumra.com',
       lastmod: new Date().toISOString(),
-      // changefreq
+      changefreq: 'weekly',
       // priority
     },
   ]);
