@@ -12,6 +12,12 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: '/',
+      has: [{ type: 'host', value: 'www.idriztravelumra.com' }],
+      destination: 'https://idriztravelumra.com/',
+      permanent: true,
+    },
+    {
       source: '/umrah',
       destination: '/umra',
       permanent: true,
@@ -39,6 +45,26 @@ const nextConfig = {
     },
     {
       source: '/umrah/umre-tetor-nentor-2023-1',
+      destination: '/umra/oferte-umre-nga-26-tetor-deri-6-nentor-viti-2023',
+      permanent: true,
+    },
+    {
+      source: '/umrah/oferte-umre-nga-05-tetor-deri-16-tetor-viti-2023',
+      destination: '/umra/oferte-umre-nga-05-tetor-deri-16-tetor-viti-2023',
+      permanent: true,
+    },
+    {
+      source: '/umrah/oferte-umre-nga-12-tetor-deri-23-tetor-viti-2023',
+      destination: '/umra/oferte-umre-nga-12-tetor-deri-23-tetor-viti-2023',
+      permanent: true,
+    },
+    {
+      source: '/umrah/oferte-umre-nga-19-tetor-deri-30-tetor-viti-2023',
+      destination: '/umra/oferte-umre-nga-19-tetor-deri-30-tetor-viti-2023',
+      permanent: true,
+    },
+    {
+      source: '/umrah/oferte-umre-nga-26-tetor-deri-6-nentor-viti-2023',
       destination: '/umra/oferte-umre-nga-26-tetor-deri-6-nentor-viti-2023',
       permanent: true,
     },
