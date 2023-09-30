@@ -4,6 +4,16 @@ const nextTranslate = require('next-translate-plugin');
 const nextConfig = {
   reactStrictMode: true,
   // ...nextTranslate(),
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'strapi-cwk.s3.eu-south-1.amazonaws.com',
+        port: '',
+        pathname: '/*',
+      },
+    ],
+  },
   redirects: async () => [
     {
       source: '/:path*',

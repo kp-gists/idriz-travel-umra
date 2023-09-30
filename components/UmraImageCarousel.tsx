@@ -5,6 +5,7 @@ import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 import imgUmraSM from '@/assets/imgs/travel-umra-desc-sm.webp';
 import imgUmraThumb from '@/assets/imgs/travel-umra-desc-thumb.webp';
 import imgUmra from '@/assets/imgs/travel-umra-desc.webp';
+import Image from 'next/image';
 
 type Props = {
   items?: ReactImageGalleryItem;
