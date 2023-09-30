@@ -101,9 +101,8 @@ const MetaData: React.FC<IMetaData> = ({
       <meta property='og:locale' content='sq-AL' />
       <meta
         name='google-site-verification'
-        content='quW196cHrFArC_qVJs6VJpsE_WNe6WrurqaK'
+        content='quW196cHrFArC_qVJs6VJpsE_WNe6WrurqaKx8LvxYk'
       />
-
       <link
         type='text/plain'
         rel='author'
