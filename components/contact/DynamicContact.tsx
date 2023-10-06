@@ -14,6 +14,8 @@ export const DynamicContact = () => {
               src={contact.icon}
               alt={contact.href}
               className='h-8 w-8 mr-2 rounded-sm'
+              width={32}
+              height={32}
             />
             <h4 className='capitalize text-md md:text-lg font-poppins mr-3 font-semibold'>
               {contact.key}

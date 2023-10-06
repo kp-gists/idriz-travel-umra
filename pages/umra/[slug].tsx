@@ -21,6 +21,7 @@ type Props = {
 };
 
 const UmrahTrip = ({ umra }: Props) => {
+  console.log('🚀 ~ file: [slug].tsx:24 ~ UmrahTrip ~ umra:', umra);
   const metaImage =
     umra?.image?.data === null
       ? imgUmraThumb
@@ -48,7 +49,7 @@ const UmrahTrip = ({ umra }: Props) => {
 
         {/* details */}
         <div className='py-8 px-3 '>
-          <h1 className='capitalize text-lg md:text-xl lg:text-2xl font-semibold flex items-center gap-x-2'>
+          <h1 className='capitalize text-lg md:text-xl lg:text-2xl font-semibold flex items-center justify-center gap-x-2 '>
             <Image
               src={ihramCouple}
               alt='muslim couple on ihram'
@@ -125,8 +126,18 @@ const UmrahTrip = ({ umra }: Props) => {
                 );
               })}
             </div>
+
+            <div>
+              <p></p>
+            </div>
           </div>
         </div>
+      </div>
+      <div className='px-4 md:px-8 lg:px-12'>
+        <div
+          className=''
+          dangerouslySetInnerHTML={{ __html: umra.description.light }}
+        ></div>
       </div>
     </PageLayout>
   );
