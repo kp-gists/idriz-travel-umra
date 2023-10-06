@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 
 import imgUmraSM from '@/assets/imgs/travel-umra-desc-sm.webp';
@@ -17,6 +16,7 @@ const UmraImageCarousel = ({ items }: Props) => {
       original: imgUmraSM.src,
       thumbnail: imgUmraThumb.src,
       fullscreen: imgUmra.src,
+      originalAlt: 'umra image',
     },
   ];
 

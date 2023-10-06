@@ -9,6 +9,7 @@ import Services from '@/components/landing/Services';
 import UmrahPackages from '@/components/landing/UmrahPackages';
 import VisitingPlaces from '@/components/landing/VisitingPlaces';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
+import OfertaUmre from '@/components/landing/OfertaUmre';
 // import { fetchUmrahPage } from '@/lib/fetching';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <MainLayout className={inter.className}>
       <Hero />
+      <OfertaUmre />
       <Services />
       <EjaNeUmreSection />
 

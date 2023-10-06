@@ -32,6 +32,8 @@ const UmrahTrip = ({ umra }: Props) => {
         original: umra?.image?.data?.attributes?.formats?.medium?.url,
         thumbnail: umra?.image?.data?.attributes?.formats?.thumbnail?.url,
         fullscreen: umra?.image?.data?.attributes?.url,
+        originalAlt: umra?.image?.data?.attributes?.name,
+        thumbnailAlt: umra?.image?.data?.attributes?.name,
       };
     } else undefined;
   };
