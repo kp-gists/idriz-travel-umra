@@ -24,7 +24,7 @@ const ScrollTop = () => {
       }
     });
     return () => {
-      window.removeEventListener('scroll', () => {});
+      window.removeEventListener('scroll', (e) => {});
     };
   }, [isScrolled]);
 

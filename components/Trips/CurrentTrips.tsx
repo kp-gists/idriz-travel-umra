@@ -39,7 +39,7 @@ const CurrentTrips = ({
     if (isSuccess && data?.data?.length === 0) {
       setTitle('');
     }
-  }, [isSuccess]);
+  }, [isSuccess, setTitle, data?.data?.length]);
 
   if (!isMount) return null;
 

@@ -9,7 +9,6 @@ import {
   pink_gradiant,
 } from '@/util/gradients';
 import ListPhoneContact from '../contact/ListPhoneContact';
-import { visitingPlaces } from '@/util/constants';
 
 type Props = {};
 

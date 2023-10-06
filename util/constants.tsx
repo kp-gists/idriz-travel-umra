@@ -92,6 +92,7 @@ export const socialNetworks: SocialNetwork[] = [
 export const googleMaps = {
   link: 'https://maps.app.goo.gl/84MyrgJ618UkXRT56',
   address: 'Mbrapa Ministrisë Arsimit, Rruga Kont Urani, Tirana 1001',
+  address1: 'Rruga Kont Urani, Tirana 1001',
   open: 'Jemi hapur nga e hena deri të shtunën: 09:00-17:00',
   iframe: (
     <iframe
