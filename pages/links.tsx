@@ -6,6 +6,7 @@ import idrizTravel from '@/assets/imgs/idriz-travel-umre.jpg';
 import Image from 'next/image';
 import { Globe, MapPin } from 'lucide-react';
 import { contacts, googleMaps, socialNetworks } from '@/util/constants';
+import MetaData from '@/components/Metadata';
 
 interface IMyLinkTreeItem {
   icon: React.ReactNode;
@@ -42,6 +43,13 @@ const MyLinkTreeItem = ({
 const LinksTree = () => {
   return (
     <>
+      <MetaData
+        title={'Links'}
+        description={'Na kontaktoni ne links tona'}
+        keywords={
+          'contact umra,umra links,umra instagram,umra facebook,umra website,'
+        }
+      />
       <section
         className='h-screen w-full flex items-start justify-center overflow-scroll pageMekkaLive px-4 py-8'
         style={{

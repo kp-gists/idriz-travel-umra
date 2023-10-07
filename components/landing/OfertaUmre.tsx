@@ -55,10 +55,9 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
         useBrowserFullscreen
         items={renderImages as ReactImageGalleryItem[]}
         showThumbnails
-        autoPlay
         showPlayButton={false}
         onClick={(e: any) => router.push(`/umra/${e.target.alt}`)}
-        slideDuration={1700}
+        slideDuration={1000}
       />
     );
   }
@@ -75,10 +74,9 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
           useBrowserFullscreen
           items={renderImages as ReactImageGalleryItem[]}
           showThumbnails
-          autoPlay
           showPlayButton={false}
           onClick={(e: any) => router.push(`/umra/${e.target.alt}`)}
-          slideDuration={1500}
+          slideDuration={500}
         />
       </div>
     </TitleSection>
