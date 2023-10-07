@@ -108,6 +108,7 @@ const MetaData: React.FC<IMetaData> = ({
         rel='author'
         href='https://codewithkoli.com/humans.txt'
       />
+      <meta name='p:domain_verify' content='1b08bd38c4b43386b1c5219f0d5358f0' />
       <link rel='manifest' href='/manifest.json' />
       <meta name='msapplication-TileColor' content='#ffffff' />
       <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
