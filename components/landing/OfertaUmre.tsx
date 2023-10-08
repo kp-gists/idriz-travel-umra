@@ -18,7 +18,12 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
     retry: 3,
   });
 
-  if (isLoading) return <div>...loading</div>;
+  if (isLoading)
+    return (
+      <div className='max-w-6xl mx-auto flex justify-center'>
+        <div className='loader' />
+      </div>
+    );
 
   if (isError) return null;
 
