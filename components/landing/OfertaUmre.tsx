@@ -7,14 +7,13 @@ import ReactImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 import imgUmraSM from '@/assets/imgs/travel-umra-desc-sm.webp';
 import imgUmraThumb from '@/assets/imgs/travel-umra-desc-thumb.webp';
 import imgUmra from '@/assets/imgs/travel-umra-desc.webp';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
   const router = useRouter();
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['oferta-umre'],
+    queryKey: ['page'],
     queryFn: async () => await fetchUmrahPage(),
     retry: 3,
   });

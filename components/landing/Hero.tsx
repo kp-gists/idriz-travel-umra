@@ -14,6 +14,7 @@ const Hero = () => {
           className='z-50 h-fit hidden md:visible object-cover md:block  md:object-contain w-screen  md:min-w-sm min-h-[200px] rounded-lg'
           alt=''
           loading='eager'
+          priority
         />
         <Image
           src={idrizTravel}
