@@ -72,7 +72,7 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
       subtitle='Zgjidh ofertën tënde'
       title='Eja edhe ti në umre!'
     >
-      <div className='p-4 '>
+      <div className='p-4 max-w-6xl sm:w-[300px] md:w-[600px] lg:w-[900px] '>
         <ReactImageGallery
           showNav
           useBrowserFullscreen
