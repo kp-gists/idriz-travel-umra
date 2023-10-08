@@ -1,6 +1,12 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { ListTodo, PercentCircle } from 'lucide-react';
+import {
+  Calendar,
+  CalendarCheck,
+  CalendarClock,
+  ListTodo,
+  PercentCircle,
+} from 'lucide-react';
 import TitleSection from '../TitleSection';
 import { travelCountries } from '@/util/constants';
 import Image from 'next/image';
@@ -57,6 +63,24 @@ const ActionButtons = () => {
             Udhetimet tona vijojn çdo jave për me shume detaje njihuni me
             paketat tona të shumta.
           </p>
+          <ul className='flex flex-col items-start gap-3'>
+            <li className='flex items-center'>
+              <CalendarCheck className='text-green-500 h-6 w-6 mr-2' /> Muaji
+              Shtator 2023
+            </li>
+            <li className='flex items-center'>
+              <CalendarCheck className='text-green-500 h-6 w-6 mr-2' /> Muaji
+              Tetor 2023
+            </li>
+            <li className='flex items-center'>
+              <CalendarClock className='text-green-500 h-6 w-6 mr-2' /> Muaji
+              Nëntor 2023
+            </li>
+            <li className='flex items-center'>
+              <CalendarClock className='text-green-500 h-6 w-6 mr-2' /> Muaji
+              Dhjetor 2023
+            </li>
+          </ul>
         </button>
       </div>
     </TitleSection>

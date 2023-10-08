@@ -57,16 +57,18 @@ const LinksTree = () => {
         }}
       >
         <div className='flex flex-col justify-center items-center gap-8'>
-          <div className='ring rounded-full p-0.5 shadow-teal-300 shadow-md '>
-            <Image
-              src={idrizTravel}
-              alt='Idriz Travel Umre'
-              width={125}
-              height={125}
-              className='rounded-full'
-              title='Idriz Travel Umre'
-            />
-          </div>
+          <Link href='https://idriztravelumra.com/'>
+            <div className='ring rounded-full p-0.5 shadow-teal-300 shadow-md '>
+              <Image
+                src={idrizTravel}
+                alt='Idriz Travel Umre'
+                width={125}
+                height={125}
+                className='rounded-full'
+                title='Idriz Travel Umre'
+              />
+            </div>
+          </Link>
 
           <h1 className='text-white font-hand text-2xl md:text-3xl lg:text-4xl font-bold bg-white/10 px-3 py-2 underline underline-offset-4 rounded-md backdrop-blur'>
             Idriz Travel Umra
