@@ -25,7 +25,7 @@ const RecentUmrahs = (props: Props) => {
         {isLoading ? (
           'loading'
         ) : (
-          <TitleSection title='Udhëtimen Tona' hasDivider className='mt-8'>
+          <TitleSection title='Udhëtimen Tona' subtitle='Idriz Travel Umra' hasDivider className='mt-8'>
             {/* list */}
             <div className='w-full p-4'>
               {data?.data?.length > 0 ? (

@@ -105,6 +105,29 @@ export const googleMaps = {
   ),
 };
 
+export const travelCountries = [
+  {
+    key: 'albania',
+    text: 'Shqipëria',
+    flag: 'https://cdn.ipwhois.io/flags/al.svg',
+  },
+  {
+    key: 'kosova',
+    text: 'Kosova',
+    flag: 'https://cdn.ipwhois.io/flags/xk.svg',
+  },
+  {
+    key: 'maqedoni',
+    text: 'Maqedonia E Veriut',
+    flag: 'https://cdn.ipwhois.io/flags/mk.svg',
+  },
+  {
+    key: 'maliizi',
+    text: 'Mali i Zi',
+    flag: 'https://cdn.ipwhois.io/flags/me.svg',
+  },
+];
+
 export const contacts: Contact[] = [
   {
     type: 'tel',

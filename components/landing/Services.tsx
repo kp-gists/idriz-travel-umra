@@ -13,7 +13,7 @@ const Services = (props: Props) => {
       <TitleSection
         title='Sherbimet Tona'
         hasDivider
-        subtitle=''
+        subtitle='Idriz Travel Umra Ofron:'
         className='pt-28'
       >
         <div className='flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-16'>
