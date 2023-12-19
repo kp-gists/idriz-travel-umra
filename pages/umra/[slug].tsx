@@ -133,10 +133,10 @@ const UmrahTrip = ({ umra }: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-4 md:px-8 lg:px-12'>
+      <div className='px-6 md:px-8 lg:px-12 max-w-4xl mx-auto '>
         {umra?.description && (
           <div
-            className=''
+            className='umra-content'
             dangerouslySetInnerHTML={{ __html: umra?.description?.light }}
           ></div>
         )}

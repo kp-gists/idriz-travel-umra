@@ -1,0 +1,15 @@
+.umra-content{
+  h1{
+   @apply text-xl md:text-3xl text-center md:max-w-[80%] mx-auto mb-4;
+  }
+  h2{
+    @apply text-lg md:text-xl mb-3 italic font-semibold;
+  }
+  h4{
+    @apply text-base md:text-lg my-3;
+  }
+  p{
+    @apply text-base md:text-lg my-3 mb-1 mt-4 font-medium;
+
+  }
+}
