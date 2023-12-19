@@ -11,10 +11,6 @@ type Props = {
 const page = 'visa';
 
 const ServicePage = ({ serviceItem }: Props) => {
-  console.log(
-    '🚀 ~ file: visa.tsx:13 ~ ServicePage ~ serviceItem:',
-    serviceItem
-  );
   return (
     <PageLayout
       title='Visa Per Arabine Saudite'

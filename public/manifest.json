@@ -1,55 +1,58 @@
 {
- "name": "Idriz Travel Umra",
- "short_name":"Umra Travel",
- "start_url": "/",
-"display": "standalone",
-"orientation": "portrait",
- "theme_color": "#fff",
- "description": "Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane. Oferta Umre.Mundeson vizita në Mekke • Medine • Arafat • Muzdelife • Mina • Hira • Kuba • Uhud • Masjid Profetit (a.s)",
-"lang": "sq-Al",
-"categories": [
-"travel umra",
-"islam",
-"Mekka",
-"Medina",
-"Hajj & Umra"
-],
- "icons": [
-  {
-   "src": "\/android-icon-36x36.png",
-   "sizes": "36x36",
-   "type": "image\/png",
-   "density": "0.75"
-  },
-  {
-   "src": "\/android-icon-48x48.png",
-   "sizes": "48x48",
-   "type": "image\/png",
-   "density": "1.0"
-  },
-  {
-   "src": "\/android-icon-72x72.png",
-   "sizes": "72x72",
-   "type": "image\/png",
-   "density": "1.5"
-  },
-  {
-   "src": "\/android-icon-96x96.png",
-   "sizes": "96x96",
-   "type": "image\/png",
-   "density": "2.0"
-  },
-  {
-   "src": "\/android-icon-144x144.png",
-   "sizes": "144x144",
-   "type": "image\/png",
-   "density": "3.0"
-  },
-  {
-   "src": "\/android-icon-192x192.png",
-   "sizes": "192x192",
-   "type": "image\/png",
-   "density": "4.0"
-  }
- ]
+  "name": "Idriz Travel Umra",
+  "short_name": "Umra Travel",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#fff",
+  "description": "Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane. Oferta Umre.Mundeson vizita në Mekke • Medine • Arafat • Muzdelife • Mina • Hira • Kuba • Uhud • Masjid Profetit (a.s)",
+  "lang": "sq-Al",
+  "categories": [
+    "Idriz Travel Umra",
+    "travel umra",
+    "islam",
+    "Mekka",
+    "Medina",
+    "Hajj & Umra",
+    "Mekka travel",
+    "Medina Travel" 
+  ],
+  "icons": [
+    {
+      "src": "/android-icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": "0.75"
+    },
+    {
+      "src": "/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "density": "1.0"
+    },
+    {
+      "src": "/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0"
+    },
+    {
+      "src": "/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
+      "src": "/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ]
 }

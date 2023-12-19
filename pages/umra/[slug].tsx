@@ -21,7 +21,7 @@ type Props = {
 };
 
 const UmrahTrip = ({ umra }: Props) => {
-  console.log('🚀 ~ file: [slug].tsx:24 ~ UmrahTrip ~ umra:', umra);
+  // console.log('🚀 ~ file: [slug].tsx:24 ~ UmrahTrip ~ umra:', umra);
   const metaImage =
     umra?.image?.data === null
       ? imgUmraThumb
