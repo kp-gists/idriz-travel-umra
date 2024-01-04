@@ -21,11 +21,13 @@ import ListPhoneContact from '../contact/ListPhoneContact';
 import { cn } from '@/lib/utils';
 import MobileMenu from './MobileMenu';
 
-type Props = {};
+type Props = {
+  isMainLayout?: boolean;
+};
 
 const isMultiLanguage = false;
 
-const Navbar = (props: Props) => {
+const Navbar = ({ isMainLayout = false }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const router = useRouter();
@@ -79,7 +81,9 @@ const Navbar = (props: Props) => {
       className={cn(
         'w-full shadow-lg backdrop-blur-sm bg-white/10 ',
         isScrolled
-          ? 'sticky top-0 left-0 right-0 z-50 translate-y-0  bg-white/60 transition-all delay-1000 '
+          ? `sticky ${
+              isMainLayout ? ' top-10' : 'top-0'
+            } left-0 right-0 z-50 translate-y-0  bg-white/60 transition-all delay-1000`
           : 'relative '
       )}
     >

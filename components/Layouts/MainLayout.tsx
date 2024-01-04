@@ -5,6 +5,8 @@ import MetaData from '../Metadata';
 import { cn } from '@/lib/utils';
 import ScrollTop from '../ScrollTop';
 import WhatsappContact from '../contact/WhatsappContact';
+import Link from 'next/link';
+import { CalendarCheck } from 'lucide-react';
 
 type Props = {
   children: React.ReactNode;
@@ -23,8 +25,18 @@ const MainLayout = ({ children, className }: Props) => {
         description={description}
         keywords={keywords}
       />
+
       <main className={cn(className, 'relative w-full')}>
-        <Navbar />
+        <Link
+          href={'/ramadan/umre-ramazan'}
+          className='h-10 bg-cyan-100 flex justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg'
+        >
+          <CalendarCheck className='w-6 h-6 text-green-800' />
+          <h1 className='text-center uppercase font-semibold'>
+            Umre ne Ramazan 2024
+          </h1>
+        </Link>
+        <Navbar isMainLayout={true} />
 
         <div className='max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden'>
           {children}

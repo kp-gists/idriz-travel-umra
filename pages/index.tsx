@@ -13,6 +13,7 @@ import MainLayout from '@/components/Layouts/MainLayout';
 import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
 
 import { fetchUmrahPage } from '@/lib/fetching';
+import RamadanUmra from '@/components/notifications/RamadanUmra';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,12 +24,15 @@ export default function Home() {
       <OfertaUmre />
       <Services />
       <EjaNeUmreSection />
+      <RamadanUmra year={2024} />
 
       <VisitingPlaces />
 
       {/* to fix with current offers */}
 
       <UmrahPackages />
+
+      {/* Ramadn Umra */}
 
       {/*TODO rreth nesh */}
       <AbutUs />

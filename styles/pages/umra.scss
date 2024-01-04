@@ -13,3 +13,13 @@
 
   }
 }
+
+.ramadan-content{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 25px;
+  p{
+    max-width: 90%;
+  }
+}

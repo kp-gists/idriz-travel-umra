@@ -4,7 +4,7 @@ import makkahIllustration from '@/assets/imgs/mecca-illustrator.jpg';
 import OfertaUmre from '@/components/landing/OfertaUmre';
 import idrizTravel from '@/assets/imgs/idriz-travel-umre.jpg';
 import Image from 'next/image';
-import { Globe, MapPin } from 'lucide-react';
+import { CalendarCheck, Globe, MapPin } from 'lucide-react';
 import { contacts, googleMaps, socialNetworks } from '@/util/constants';
 import MetaData from '@/components/Metadata';
 
@@ -57,6 +57,15 @@ const LinksTree = () => {
         }}
       >
         <div className='flex flex-col justify-center items-center gap-8'>
+          <Link
+            href={'/ramadan/umre-ramazan'}
+            className='w-full rounded-md h-10 animate-pulse bg-yellow-100 flex justify-center items-center gap-1 z-50  text-sm md:text-lg'
+          >
+            <CalendarCheck className='w-6 h-6 text-green-800' />
+            <h1 className='text-center uppercase font-semibold'>
+              Umre ne Ramazan 2024!
+            </h1>
+          </Link>
           <Link href='https://idriztravelumra.com/'>
             <div className='ring rounded-full p-0.5 shadow-teal-300 shadow-md '>
               <Image
