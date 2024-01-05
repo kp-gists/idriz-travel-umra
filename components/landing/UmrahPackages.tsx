@@ -1,8 +1,7 @@
 import React from 'react';
 import TitleSection from '../TitleSection';
-import { neededDocs, packageServices } from '@/util/constants';
+import { packageServices } from '@/util/constants';
 import getIcon from '@/util/functions';
-import { Info } from 'lucide-react';
 
 type Props = {};
 

@@ -39,7 +39,7 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
     },
   ];
 
-  const ofertat = trips.map((trip: any) => {
+  const ofertat = trips?.map((trip: any) => {
     const image = trip.attributes.image.data.attributes;
     return {
       original: image.url,

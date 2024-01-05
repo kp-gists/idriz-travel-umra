@@ -1,2 +1,12 @@
 @import './live.scss';
 @import './umra.scss';
+
+// read more btn
+
+.read-more{
+  height: 80px;
+  font-size: 20px;
+  color: blue;
+  background:linear-gradient(180deg,#ffffffa1,#f5f5f5, #f5f5f5,);
+  @apply hover:scale-105;
+}

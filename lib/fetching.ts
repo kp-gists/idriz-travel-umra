@@ -161,6 +161,50 @@ export const fetchUmraRamadan = async () => {
     .catch((e) => console.log({ e }));
 };
 
+export const fetchUmraMedia = async () => {
+  const qsPage = qs.stringify(
+    {
+      populate: {
+        media: {
+          populate: '*',
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/idriz-travel-umra?${qsPage}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
+export const fetchUmraInfo = async () => {
+  const qsPage = qs.stringify(
+    {
+      populate: {
+        info: {
+          populate: '*',
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/idriz-travel-umra?${qsPage}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
 export const fetchUmrahPage = async () => {
   const qsPage = qs.stringify(
     {
