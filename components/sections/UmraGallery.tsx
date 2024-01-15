@@ -44,9 +44,7 @@ const UmraGallery = () => {
           items={ofertat as ReactImageGalleryItem[]}
           showThumbnails
           showPlayButton={false}
-          slideDuration={750}
-          slideInterval={3500}
-          autoPlay
+          autoPlay={false}
           showFullscreenButton
           showBullets
           showIndex
