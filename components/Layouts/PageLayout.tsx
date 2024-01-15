@@ -18,7 +18,8 @@ const PageLayout = ({
   description,
   imageUrl,
 }: Props) => {
-  const keyword = keywords + 'umrah,umre, haj, mekka, medina, travel';
+  const keyword =
+    keywords + 'umra, umre nga shqiperia, haj, mekka, medina, travel';
 
   return (
     <>

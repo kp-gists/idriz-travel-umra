@@ -12,7 +12,7 @@ const page = 'umrah';
 
 const ServicePage = ({ serviceItem }: Props) => {
   return (
-    <PageLayout title='Umrah'>
+    <PageLayout title='Umre Nga Shqiperia'>
       <div className='px-4 py-12'>
         <div
           className='flex flex-col justify-start gap-12 text-lg md:text-xl lg:text-2xl max-w-5xl mx-auto'
@@ -21,8 +21,14 @@ const ServicePage = ({ serviceItem }: Props) => {
 
         <div className='max-w-5xl mx-auto py-12'>
           <h1 className='py-4 capitalize text-lg md:text-xl lg:text-3xl bold text-center'>
-            Na Kontaktoni
+            Na Kontaktoni për umre:
           </h1>
+
+          <h2 className='my-4'>* Umre Nga Shqiperia</h2>
+          <h2 className='my-4'>** Umre Nga Kosova</h2>
+          <h2 className='my-4'>*** Umre Nga Maqedonia E Veriut</h2>
+          <h2 className='my-4'>**** Umre Nga Mali i Zi</h2>
+
           <DynamicContact />
         </div>
       </div>

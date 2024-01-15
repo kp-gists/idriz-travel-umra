@@ -14,14 +14,14 @@ type Props = {
 };
 
 const MainLayout = ({ children, className }: Props) => {
-  const description = `Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre, përkthime, kurbane. Oferta Umre.Mundeson vizita në Mekke • Medine • Arafat • Muzdelife • Mina • Hira • Kuba • Uhud • Masjid Profetit (a.s)`;
+  const description = `Idriz Travel Umra është një agjenci udhëtimesh e fokusuar në shërbimet me Arabinë Saudite: viza, umre(Umre nga Shqiperia, Umre nga Kosova, Mali i Zi, Maqedonia e Veriut), përkthime, kurbane. Oferta Umre. Mundeson vizita në Mekke • Medine • Arafat • Muzdelife • Mina • Hira • Kuba • Uhud • Masjid Profetit (a.s)`;
 
   const keywords = `umreja, Paketa umre,mekka, medina,Kërkesat për umre,Viza umre,Ritualet umres,Udhëtimi i umres, Fluturimet umre, Hotele umre,Rezervimi i umres,Fluturimet hotelet umra`;
 
   return (
     <>
       <MetaData
-        title='Eja dhe ti në umre'
+        title='Eja dhe ti në umre | Umre nga Shqiperia'
         description={description}
         keywords={keywords}
       />
