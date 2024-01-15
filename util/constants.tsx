@@ -30,9 +30,9 @@ export const navLinks = [
     key: 'services',
   },
   {
-    href: '/umra',
-    title: 'Umret Tona',
-    key: 'umra-page',
+    href: '/umra/umreja-hap-pas-hapi',
+    title: 'Rituali Umra',
+    key: 'umra-ritual-page',
   },
   {
     href: '/#contact',
