@@ -1,3 +1,4 @@
+import DownloadUmraBook from '@/components/DownloadUmraBook';
 import PageLayout from '@/components/Layouts/PageLayout';
 import { fetchUmraInfo } from '@/lib/fetching';
 import { GetStaticProps } from 'next';
@@ -16,6 +17,10 @@ const UmreInfoPage = ({ umraInfo }: Props) => {
           __html: `${umraInfo?.data?.attributes?.info?.umre_info}`,
         }}
       ></div>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-2 mt-8'>
+        <p>Idriz Travel Umra ju mundëson një libër për ritualin e umres</p>{' '}
+        <DownloadUmraBook />
+      </div>
     </PageLayout>
   );
 };

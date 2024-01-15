@@ -2,6 +2,7 @@ import React from 'react';
 import TitleSection from '../TitleSection';
 import { packageServices } from '@/util/constants';
 import getIcon from '@/util/functions';
+import DownloadUmraBook from '../DownloadUmraBook';
 
 type Props = {};
 
@@ -32,6 +33,8 @@ const UmrahPackages = (props: Props) => {
                 <div className='w-full text-left p-5'>
                   <p className=' font-normal text-base m-0'> {service.text}</p>
                 </div>
+
+                {service?.action && <DownloadUmraBook />}
               </div>
             ))}
           </div>

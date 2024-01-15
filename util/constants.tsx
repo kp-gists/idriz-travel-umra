@@ -9,6 +9,7 @@ import gmailSrc from '@/assets/icons/gmail.png';
 import facebook from '@/assets/imgs/idriz-travel-umra-facebook.webp';
 import instagram from '@/assets/imgs/idriz-travel-umra-instagram.webp';
 import { renderWhatsappLink, renderWhatsappLinkString } from './functions';
+import DownloadUmraBook from '@/components/DownloadUmraBook';
 
 const defaultClassNames = 'h-6 w-6 mr-2';
 
@@ -232,6 +233,7 @@ export const packageServices = [
     key: 'book',
     title: 'Libri',
     text: 'Libri rituali i Umres me detajet e umres i shpjeguar nga Muhammed ibën Salih El-`Uthejmin.',
+    action: <DownloadUmraBook />,
   },
   {
     key: 'visa',

@@ -2,8 +2,9 @@ import React from 'react';
 import TitleSection from '../TitleSection';
 import { useQuery } from '@tanstack/react-query';
 import { fetchUmraInfo } from '@/lib/fetching';
-import { Loader } from 'lucide-react';
+import { Download, Loader } from 'lucide-react';
 import Link from 'next/link';
+import DownloadUmraBook from '../DownloadUmraBook';
 
 const UmreInfo = () => {
   const {
@@ -32,12 +33,15 @@ const UmreInfo = () => {
           }}
         ></div>
 
-        <Link
-          href={`/umra/umreja-hap-pas-hapi`}
-          className='read-more block pt-5 px-auto text-center absolute bottom-0 left-0 right-0'
-        >
-          ...Lexo më shumë
-        </Link>
+        <div className='read-more flex justify-around gap-2 pt-5 px-auto text-center absolute bottom-0 left-0 right-0'>
+          <Link
+            href={`/umra/umreja-hap-pas-hapi`}
+            className='text-center block '
+          >
+            ...Lexo më shumë
+          </Link>
+          <DownloadUmraBook />
+        </div>
       </div>
     </TitleSection>
   );
