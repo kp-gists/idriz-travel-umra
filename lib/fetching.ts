@@ -233,6 +233,32 @@ export const fetchUmrahPage = async () => {
     .then((res) => res.data)
     .catch((e) => console.log({ e }));
 };
+export const fetchUmrahMedia = async () => {
+  const qsMedia = qs.stringify(
+    {
+      populate: {
+        media: {
+          populate: {
+            clients_photos: {
+              image: true,
+            },
+          },
+        },
+      },
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
+
+  // `https://strapi-ts-blog-production.up.railway.app/api/umrah-trips?filters[month][$eq]=${month}&filters[year][$eq]=${currentYear}`
+  return axios
+    .get(
+      `https://strapi-ts-blog-production.up.railway.app/api/idriz-travel-umra?${qsMedia}`
+    )
+    .then((res) => res.data)
+    .catch((e) => console.log({ e }));
+};
 
 export const fetchServices = async () => {
   const qsPage = qs.stringify(

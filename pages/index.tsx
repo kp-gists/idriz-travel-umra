@@ -15,6 +15,7 @@ import EjaNeUmreSection from '@/components/sections/EjaNeUmreSection';
 import { fetchUmrahPage } from '@/lib/fetching';
 import RamadanUmra from '@/components/notifications/RamadanUmra';
 import UmreInfo from '@/components/sections/UmreInfo';
+import UmraGallery from '@/components/sections/UmraGallery';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,7 +32,8 @@ export default function Home() {
 
       <VisitingPlaces />
 
-      {/* to fix with current offers */}
+      {/* gallery */}
+      <UmraGallery />
 
       <UmrahPackages />
 

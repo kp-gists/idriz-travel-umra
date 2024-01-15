@@ -2,7 +2,7 @@ import React from 'react';
 import TitleSection from '../TitleSection';
 import { useQuery } from '@tanstack/react-query';
 import { fetchUmraInfo } from '@/lib/fetching';
-import { Download, Loader } from 'lucide-react';
+import { Loader } from 'lucide-react';
 import Link from 'next/link';
 import DownloadUmraBook from '../DownloadUmraBook';
 
@@ -19,6 +19,7 @@ const UmreInfo = () => {
 
   if (isLoading) return <Loader className='animate-spin' />;
   if (isError) return;
+
   return (
     <TitleSection
       hasDivider

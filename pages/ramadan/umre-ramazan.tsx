@@ -69,10 +69,6 @@ const UmreRamadan = ({ umra }: Props) => {
 
 export const getStaticProps: GetStaticProps = async (props) => {
   const umra = await fetchUmraRamadan();
-  console.log(
-    '🚀 ~ file: umre-ramazan.tsx:78 ~ constgetStaticProps:GetStaticProps= ~ umra:',
-    umra
-  );
 
   if (umra?.data) {
     return {
