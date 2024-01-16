@@ -33,7 +33,7 @@ export default function Home() {
       <VisitingPlaces />
 
       {/* gallery */}
-      <UmraGallery />
+      {/* <UmraGallery /> */}
 
       <UmrahPackages />
 
