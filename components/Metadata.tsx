@@ -103,6 +103,10 @@ const MetaData: React.FC<IMetaData> = ({
         name='google-site-verification'
         content='quW196cHrFArC_qVJs6VJpsE_WNe6WrurqaKx8LvxYk'
       />
+      <meta
+        name='google-adsense-account'
+        content='ca-pub-9759738754003722'
+      ></meta>
       <link
         type='text/plain'
         rel='author'
