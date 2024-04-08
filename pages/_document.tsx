@@ -1,3 +1,4 @@
+import AdSense from '@/components/AdSense';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -15,6 +16,12 @@ export default function Document() {
           type='text/css'
           href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
         />
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759738754003722'
+          crossOrigin='anonymous'
+        ></script>
+        <AdSense pId='ca-pub-9759738754003722' />
       </Head>
       <body>
         <Main />
