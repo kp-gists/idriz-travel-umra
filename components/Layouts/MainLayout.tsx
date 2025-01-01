@@ -1,12 +1,12 @@
-import React from 'react';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
-import MetaData from '../Metadata';
-import { cn } from '@/lib/utils';
-import ScrollTop from '../ScrollTop';
-import WhatsappContact from '../contact/WhatsappContact';
-import Link from 'next/link';
-import { CalendarCheck } from 'lucide-react';
+import React from "react";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import MetaData from "../Metadata";
+import { cn } from "@/lib/utils";
+import ScrollTop from "../ScrollTop";
+import WhatsappContact from "../contact/WhatsappContact";
+import Link from "next/link";
+import { CalendarCheck } from "lucide-react";
 
 type Props = {
   children: React.ReactNode;
@@ -20,40 +20,32 @@ const MainLayout = ({ children, className }: Props) => {
 
   return (
     <>
-      <MetaData
-        title='Eja dhe ti në umre | Umre nga Shqiperia'
-        description={description}
-        keywords={keywords}
-      />
+      <MetaData title="Eja dhe ti në umre | Umre nga Shqiperia" description={description} keywords={keywords} />
 
-      <main className={cn(className, 'relative w-full')}>
+      <main className={cn(className, "relative w-full")}>
         <Link
-          href={'/ramadan/umre-ramazan'}
-          className='hidden h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg'
+          href={"/ramadan/umre-ramazan"}
+          className="hidden h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
         >
-          <CalendarCheck className='w-6 h-6 text-green-800' />
-          <h1 className='text-center uppercase font-semibold'>
-            Umre ne Ramazan 2024
-          </h1>
+          <CalendarCheck className="w-6 h-6 text-green-800" />
+          <h1 className="text-center uppercase font-semibold">Umre ne Ramazan 2024</h1>
         </Link>
 
         <Link
-          href={'/services/kurban'}
-          className='h-10 bg-cyan-100 flex justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg'
+          href={"/services/kurban"}
+          className="hidden h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
         >
-          <CalendarCheck className='w-6 h-6 text-green-800' />
-          <h1 className='text-center uppercase font-semibold'>
-            Kurban për Haxhin 2024
-          </h1>
+          <CalendarCheck className="w-6 h-6 text-green-800" />
+          <h1 className="text-center uppercase font-semibold">Kurban për Haxhin 2024</h1>
         </Link>
         <Navbar isMainLayout={true} />
 
-        <div className='max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden'>
+        <div className="max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden">
           {children}
           <Footer />
         </div>
         <ScrollTop />
-        <div className='sticky bottom-5 w-14 h-14 p-1 left-full z-[10001] '>
+        <div className="sticky bottom-5 w-14 h-14 p-1 left-full z-[10001] ">
           <WhatsappContact />
         </div>
       </main>
