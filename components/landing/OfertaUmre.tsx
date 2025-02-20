@@ -1,27 +1,27 @@
-import React from 'react';
-import TitleSection from '../TitleSection';
-import { useQuery } from '@tanstack/react-query';
-import { fetchUmrahPage } from '@/lib/fetching';
-import ReactImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
+import React from "react";
+import TitleSection from "../TitleSection";
+import { useQuery } from "@tanstack/react-query";
+import { fetchUmrahPage } from "@/lib/fetching";
+import ReactImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 
-import imgUmraSM from '@/assets/imgs/travel-umra-desc-sm.webp';
-import imgUmraThumb from '@/assets/imgs/travel-umra-desc-thumb.webp';
-import imgUmra from '@/assets/imgs/travel-umra-desc.webp';
-import { useRouter } from 'next/navigation';
+import imgUmraSM from "@/assets/imgs/travel-umra-desc-sm.webp";
+import imgUmraThumb from "@/assets/imgs/travel-umra-desc-thumb.webp";
+import imgUmra from "@/assets/imgs/travel-umra-desc.webp";
+import { useRouter } from "next/navigation";
 
 const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
   const router = useRouter();
 
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ['page'],
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ["page"],
     queryFn: async () => await fetchUmrahPage(),
     retry: 3,
   });
 
   if (isLoading)
     return (
-      <div className='max-w-6xl mx-auto flex justify-center'>
-        <div className='loader' />
+      <div className="max-w-6xl mx-auto flex justify-center">
+        <div className="loader" />
       </div>
     );
 
@@ -34,8 +34,8 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
       original: imgUmraSM.src,
       thumbnail: imgUmraThumb.src,
       fullscreen: imgUmra.src,
-      originalAlt: 'umra trip medina mekka qabja',
-      thumbnailAlt: 'travel umra trip oferta umre',
+      originalAlt: "umra trip medina mekka qabja",
+      thumbnailAlt: "travel umra trip oferta umre",
     },
   ];
 
@@ -67,12 +67,8 @@ const OfertaUmre = ({ isLinks }: { isLinks?: boolean }) => {
   }
 
   return (
-    <TitleSection
-      hasDivider
-      subtitle='Zgjidh ofertën tënde'
-      title='Eja edhe ti në umre!'
-    >
-      <div className='p-4 max-w-6xl sm:w-[300px] md:w-[600px] lg:w-[900px] '>
+    <TitleSection hasDivider subtitle="Zgjidh ofertën tënde" title="Eja edhe ti në umre!">
+      <div className="p-4 max-w-6xl sm:w-[300px] md:w-[600px] lg:w-[900px] ">
         <ReactImageGallery
           showNav
           useBrowserFullscreen

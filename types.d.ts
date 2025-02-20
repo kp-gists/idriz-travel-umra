@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/image";
 
 export type SocialNetwork = {
   icon: JSX.Element;
@@ -9,7 +9,7 @@ export type SocialNetwork = {
 };
 
 export type Contact = {
-  type: 'tel' | 'email';
+  type: "tel" | "email";
   icon: StaticImageData | string;
   key: string;
   displayName: string | number;
@@ -19,18 +19,18 @@ export type Contact = {
 };
 
 export type Months =
-  | 'January'
-  | 'February'
-  | 'March'
-  | 'April'
-  | 'May'
-  | 'June'
-  | 'July'
-  | 'August'
-  | 'September'
-  | 'October'
-  | 'November'
-  | 'December';
+  | "January"
+  | "February"
+  | "March"
+  | "April"
+  | "May"
+  | "June"
+  | "July"
+  | "August"
+  | "September"
+  | "October"
+  | "November"
+  | "December";
 
 export type Trip = {};
 
@@ -39,11 +39,11 @@ export type UmrahPrice = {
   discounted_value?: number;
   id?: number;
   isDiscounted: boolean;
-  room: 'roomX2' | 'roomX3' | 'roomX4';
+  room: "roomX2" | "roomX3" | "roomX4";
   value: number;
 };
 
-export type ServiceType = 'umrah' | 'visa' | 'translate' | 'kurban';
+export type ServiceType = "umrah" | "visa" | "translate" | "kurban";
 
 export type Service = {
   key: string;

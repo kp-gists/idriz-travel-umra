@@ -24,30 +24,31 @@ const UmreRamadan = ({ umra }: Props) => {
       imageUrl={metaImage}
       description={description}
     >
-      <div className="my-4 px-4 md:px-6  flex flex-col mx-auto max-w-6xl">
-        {umra.map((item: any) => {
+      <div className="my-4 px-4 md:px-6 gap-10 md:gap-16 flex flex-col mx-auto max-w-6xl">
+        {umra.map((item: any, idx: number) => {
           return (
-            <div key={item.id} className="mb-4 ">
+            <div key={item.id} className="mb-4 border-b-4 border-gray-300 pb-8 md:mb-8">
+              <h1>Umre të</h1>
               <h1 className="text-center text-xl md:text-3xl">{item.slogan}</h1>
 
-              <div className="my-6 ramadan-content" dangerouslySetInnerHTML={{ __html: item.content }}></div>
+              <div className="my-6 ramadan-content mx-auto" dangerouslySetInnerHTML={{ __html: item.content }}></div>
 
               <div>
                 <h1 className="text-center mb-4 text-lg md:text-xl">
                   <strong>Idriz Travel Umra</strong> vjen me oferta per muajin e bekuar te{" "}
-                  <strong>Ramazanit 2025</strong>
+                  <strong>Ramazanit {umra.ramadan_year}</strong>
                 </h1>
 
-                <h2>Umre nga Shqiperia - Umre ne Ramazan 2025</h2>
+                <h2>Umre nga Shqiperia - Umre ne Ramazan {umra.ramadan_year}</h2>
                 <div className="max-w-6xl flex flex-col justify-center items-center gap-8 p-6 relative h-full">
                   {/* TODO add the trips of the ramadan here */}
-                  {item.umrah_trips.data.map((trip: any) => (
-                    <Link key={trip.id} href={`/umra/${trip.attributes.slug}`}>
+                  {item.umrah_trips.map((trip: any) => (
+                    <Link key={trip.id} href={`/umra/${trip.slug}`}>
                       <Image
-                        src={trip.attributes.image.data.attributes.url}
+                        src={trip.image !== null ? trip.image.url : ""}
                         alt="umra ne ramazan"
                         width={500}
-                        height={trip.attributes.image.data.attributes.height}
+                        height={trip.image !== null ? trip.image.height : 600}
                         className="object-contain rounded-lg ring-green-400 ring-2 shadow-md hover:scale-105 "
                       />
                     </Link>
@@ -64,11 +65,12 @@ const UmreRamadan = ({ umra }: Props) => {
 
 export const getStaticProps: GetStaticProps = async (props) => {
   const umra = await fetchUmraRamadan();
+  console.log("🚀 ~ constgetStaticProps:GetStaticProps= ~ umra:", umra);
 
   if (umra?.data) {
     return {
       props: {
-        umra: umra.data.attributes.umreRamadan,
+        umra: umra.data.umreRamadan,
       },
     };
   }

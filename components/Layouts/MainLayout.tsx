@@ -25,10 +25,10 @@ const MainLayout = ({ children, className }: Props) => {
       <main className={cn(className, "relative w-full")}>
         <Link
           href={"/ramadan/umre-ramazan"}
-          className="hidden h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
+          className="flex h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
         >
           <CalendarCheck className="w-6 h-6 text-green-800" />
-          <h1 className="text-center uppercase font-semibold">Umre ne Ramazan 2024</h1>
+          <h1 className="text-center uppercase font-semibold">Umre ne Ramazan 2025</h1>
         </Link>
 
         <Link
