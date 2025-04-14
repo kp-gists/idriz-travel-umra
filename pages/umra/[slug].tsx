@@ -1,31 +1,28 @@
-import UmraImageCarousel from '@/components/UmraImageCarousel';
-import PageLayout from '@/components/Layouts/PageLayout';
+import UmraImageCarousel from "@/components/UmraImageCarousel";
+import PageLayout from "@/components/Layouts/PageLayout";
 
-import { fetchTripBySlug, fetchUmrahTrips } from '@/lib/fetching';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Image from 'next/image';
-import React from 'react';
+import { fetchTripBySlug, fetchUmrahTrips } from "@/lib/fetching";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
+import React from "react";
 
-import { convertDate } from '@/util/date';
-import { UmrahPrice } from '@/types';
+import { convertDate } from "@/util/date";
+import { UmrahPrice } from "@/types";
 
-import ihramCouple from '@/assets/icons/ihram-64.webp';
-import imgUmraThumb from '@/assets/imgs/travel-umra-desc-thumb.webp';
-import { X } from 'lucide-react';
+import ihramCouple from "@/assets/icons/ihram-64.webp";
+import imgUmraThumb from "@/assets/imgs/travel-umra-desc-thumb.webp";
+import { X } from "lucide-react";
 
-import hotel from '@/assets/icons/hotel-64.png';
-import muslim from '@/assets/icons/muslim-48.png';
+import hotel from "@/assets/icons/hotel-64.png";
+import muslim from "@/assets/icons/muslim-48.png";
 
 type Props = {
   umra: any;
 };
 
 const UmrahTrip = ({ umra }: Props) => {
-  // console.log('🚀 ~ file: [slug].tsx:24 ~ UmrahTrip ~ umra:', umra);
-  const metaImage =
-    umra?.image?.data === null
-      ? imgUmraThumb
-      : umra?.image?.data?.attributes?.formats?.thumbnail?.url;
+  console.log("🚀 ~ file: [slug].tsx:24 ~ UmrahTrip ~ umra:", umra);
+  const metaImage = umra?.image?.data === null ? imgUmraThumb : umra?.image?.data?.attributes?.formats?.thumbnail?.url;
 
   const getImages = () => {
     if (umra?.image?.data) {
@@ -40,40 +37,30 @@ const UmrahTrip = ({ umra }: Props) => {
   };
 
   return (
-    <PageLayout title={umra?.title} keywords='' imageUrl={metaImage}>
-      <div className='flex flex-col items-center justify-center px-4 my-8 lg:flex-row max-w-6xl mx-auto'>
+    <PageLayout title={umra?.title} keywords="" imageUrl={metaImage}>
+      <div className="flex flex-col items-center justify-center px-4 my-8 lg:flex-row max-w-6xl mx-auto">
         {/* image oferte with zoom in full */}
-        <div className='  mx-auto lg:mx-0  overflow-hidden w-full shadow-2xl border rounded-md'>
+        <div className="  mx-auto lg:mx-0  overflow-hidden w-full shadow-2xl border rounded-md">
           <UmraImageCarousel items={getImages()} />
         </div>
 
         {/* details */}
-        <div className='py-8 px-3 '>
-          <h1 className='capitalize text-lg md:text-xl lg:text-2xl font-semibold flex items-center justify-center gap-x-2 '>
-            <Image
-              src={ihramCouple}
-              alt='muslim couple on ihram'
-              width={32}
-              height={32}
-            />
+        <div className="py-8 px-3 ">
+          <h1 className="capitalize text-lg md:text-xl lg:text-2xl font-semibold flex items-center justify-center gap-x-2 ">
+            <Image src={ihramCouple} alt="muslim couple on ihram" width={32} height={32} />
             {umra?.title}
           </h1>
 
-          <div className='py-4 px-4 max-w'>
-            <p className='leading-6 text-sm md:leading-7 md:text-lg py-4'>
-              Këtë muaj do te udhëtojmë drejt vendeve të shenjta. Nisja do jetë
-              nga airport i Tiranes me një ndalesë ne Athine, Greqi. Pastaj
-              pjesa e dytë e fluturimit nga Athina në airport Jeddah, Arabia
-              Saudite.
+          <div className="py-4 px-4 max-w">
+            <p className="leading-6 text-sm md:leading-7 md:text-lg py-4">
+              Këtë muaj do te udhëtojmë drejt vendeve të shenjta. Nisja do jetë nga airport i Tiranes me një ndalesë ne
+              Athine, Greqi. Pastaj pjesa e dytë e fluturimit nga Athina në airport Jeddah, Arabia Saudite.
             </p>
 
-            <div className='flex gap-x-6 gap-y-4'>
+            <div className="flex gap-x-6 gap-y-4">
               <h3>
                 <strong>Nisja: </strong>
-                <time
-                  dateTime={umra?.departing as any}
-                  suppressHydrationWarning
-                >
+                <time dateTime={umra?.departing as any} suppressHydrationWarning>
                   {convertDate(umra?.departing)}
                 </time>
               </h3>
@@ -86,40 +73,28 @@ const UmrahTrip = ({ umra }: Props) => {
             </div>
           </div>
 
-          <div className='pt-8'>
-            <h2 className='text-center mb-4 font-semibold text-lg flex items-center justify-center'>
-              Çmimet E Hoteleve{' '}
-              <Image
-                src={hotel}
-                className='w-6 h-6 ml-2'
-                alt='hotelet ne mekke edhe medine'
-              />
+          <div className="pt-8">
+            <h2 className="text-center mb-4 font-semibold text-lg flex items-center justify-center">
+              Çmimet E Hoteleve <Image src={hotel} className="w-6 h-6 ml-2" alt="hotelet ne mekke edhe medine" />
             </h2>
 
-            <div className='flex flex-col md:flex-row gap-4 items-center justify-around w-full  px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3'>
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-around w-full  px-1 my-2 gap-x-2 md:gap-x-6 lg:gap-x-3">
               {umra?.price?.map((price: UmrahPrice) => {
                 return (
                   <div
                     key={price.id}
-                    className='flex flex-col w-full items-center gap-2 justify-center ring-1 rounded-xl ring-sky-400 mx-1 px-1 md:px-4 py-2 drop-shadow-md min-w-[205px] shadow-white'
+                    className="flex flex-col w-full items-center gap-2 justify-center ring-1 rounded-xl ring-sky-400 mx-1 px-1 md:px-4 py-2 drop-shadow-md min-w-[205px] shadow-white"
                   >
-                    <div className='flex items-end gap-0.5 '>
-                      <h5 className='mr-2 font-normal text-md'>Dhoma me</h5>
-                      <div className='h-10 w-10 flex items-center justify-center border rounded-full bg-indigo-300'>
-                        <Image
-                          src={muslim}
-                          className='h-8 w-8'
-                          alt='hotel muslim person'
-                          loading='lazy'
-                        />
+                    <div className="flex items-end gap-0.5 ">
+                      <h5 className="mr-2 font-normal text-md">Dhoma me</h5>
+                      <div className="h-10 w-10 flex items-center justify-center border rounded-full bg-indigo-300">
+                        <Image src={muslim} className="h-8 w-8" alt="hotel muslim person" loading="lazy" />
                       </div>
-                      <X className='h-6 w-6 mb-0.5' />
-                      <span className='text-2xl font-semibold'>
-                        {price.room.slice(5, 6)}
-                      </span>
+                      <X className="h-6 w-6 mb-0.5" />
+                      <span className="text-2xl font-semibold">{price.room.slice(5, 6)}</span>
                     </div>
 
-                    <div className='text-sm md:text-md  font-semibold '>
+                    <div className="text-sm md:text-md  font-semibold ">
                       Çmimet për person: {price.value} {price.currency}
                     </div>
                   </div>
@@ -133,12 +108,9 @@ const UmrahTrip = ({ umra }: Props) => {
           </div>
         </div>
       </div>
-      <div className='px-6 md:px-8 lg:px-12 max-w-4xl mx-auto '>
+      <div className="px-6 md:px-8 lg:px-12 max-w-4xl mx-auto ">
         {umra?.description && (
-          <div
-            className='umra-content'
-            dangerouslySetInnerHTML={{ __html: umra?.description?.light }}
-          ></div>
+          <div className="umra-content" dangerouslySetInnerHTML={{ __html: umra?.description?.light }}></div>
         )}
       </div>
     </PageLayout>

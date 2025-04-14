@@ -23,21 +23,6 @@ const MainLayout = ({ children, className }: Props) => {
       <MetaData title="Eja dhe ti në umre | Umre nga Shqiperia" description={description} keywords={keywords} />
 
       <main className={cn(className, "relative w-full")}>
-        <Link
-          href={"/ramadan/umre-ramazan"}
-          className="flex h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
-        >
-          <CalendarCheck className="w-6 h-6 text-green-800" />
-          <h1 className="text-center uppercase font-semibold">Umre ne Ramazan 2025</h1>
-        </Link>
-
-        <Link
-          href={"/services/kurban"}
-          className="hidden h-10 bg-cyan-100  justify-center items-center gap-1 sticky  top-0 z-50  text-sm md:text-lg"
-        >
-          <CalendarCheck className="w-6 h-6 text-green-800" />
-          <h1 className="text-center uppercase font-semibold">Kurban për Haxhin 2024</h1>
-        </Link>
         <Navbar isMainLayout={true} />
 
         <div className="max-w-[1600px] mx-auto h-full px-3 md:px-6  overflow-hidden">

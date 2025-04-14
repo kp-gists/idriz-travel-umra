@@ -97,17 +97,6 @@ export const fetchUmrahTrips = async () => {
       populate: {
         price: true,
         description: true,
-        umrah_hotels: {
-          populate: {
-            img: true,
-          },
-        },
-        umrah_tour_guides: {
-          populate: {
-            avatar: true,
-            social_networks: true,
-          },
-        },
       },
       sort: {
         departing: "asc",
